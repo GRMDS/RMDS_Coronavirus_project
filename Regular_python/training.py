@@ -9,15 +9,17 @@ from model import LSTMModel
 from torch.utils.data import DataLoader
 from util import get_ts_dxy, prepare_data
 import torch.nn as nn
+import matplotlib.pyplot as plt
 
-def training_model(train_data, test_data, num_epochs, batch_size=8, input_dim=3, hidden_dim=150, output_dim=3, seq_dim=7):
+def training_model(train_data, test_data, num_epochs, batch_size=8, input_dim=1, hidden_dim=100, output_dim=100, seq_dim=7):
     
     train_loader = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, drop_last=True)
     test_loader = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, drop_last=True)
     Mymodel = LSTMModel(input_dim, hidden_dim, 1, output_dim)
     loss_function = nn.MSELoss()
-    optimizer = torch.optim.Adam(Mymodel.parameters(), lr=0.01)
+    optimizer = torch.optim.Adam(Mymodel.parameters(), lr=0.0001)
     iters = 0
+    hisloss = []
     for epoch in range(num_epochs):
         for data_val,target in train_loader:
             # clean the previous gredient
@@ -25,6 +27,7 @@ def training_model(train_data, test_data, num_epochs, batch_size=8, input_dim=3,
             outputs = Mymodel(data_val)
             #calculate loss
             loss = loss_function(outputs, target)
+            hisloss.append(loss.item())
             # using loss to calculate gredient, stored in model
             loss.backward()
             # using gredient to update model parameters
@@ -35,7 +38,14 @@ def training_model(train_data, test_data, num_epochs, batch_size=8, input_dim=3,
                     test_outputs = Mymodel(test_val)
                     loss2 = loss_function(test_outputs, test_target)
                 print('Iteration: {}. TrainLoss: {}. TestLoss: {}'.format(iters, loss.item(), loss2.item()))
-                torch.save(Mymodel.state_dict(), 'trained_model_'+ str(iters) + '.pkl')
+                torch.save(Mymodel.state_dict(), 'Trained_model/trained_model_'+ str(iters) + '.pkl')
+                
+    plt.plot(hisloss)
+    plt.xlabel('Iteration')
+    plt.ylabel('Training loss')
+    plt.title('Traing process')
+    plt.grid(True)
+    plt.savefig('Trained_model/loss.png')
     return Mymodel
 
 

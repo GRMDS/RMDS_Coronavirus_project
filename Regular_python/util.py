@@ -6,10 +6,11 @@ Created on Tue Feb 18 10:28:10 2020
 """
 import pandas as pd
 import numpy as np
-from scipy import stats
 import torch.tensor
 from model import datasets
 from torch.utils.data import random_split
+import json
+from urllib.request import urlopen, quote
 
 
 def get_ts_dxy(skip_day):
@@ -56,14 +57,30 @@ def calculate_graph(data,first_level_city_list):
     return graph
 
 def prepare_data(data,window):
+    '''
     arraydata = []
     for index, row in data.iterrows():
         ts = np.diff(np.reshape(row.ts,(-1,3)),axis = 0)
         ts = ts[~np.isnan(ts).any(axis=1),:]
+        address = row.provinceName+row.cityName
+        lat, lng = get_location_using_baidu(address)
         for i in range(len(ts)-window+1):
-            seq = ts[i:i+window]
-            seq = np.nan_to_num(stats.zscore(seq, axis = 0))
-            arraydata.append(seq)
+            seq = np.array(ts[i:i+window])
+            total_recover = np.sum(seq[:,1])
+            total_death = np.sum(seq[:,2])
+            seq = seq[:,0]
+            mean = np.mean(seq,axis = 0)
+            std = np.std(seq,axis = 0)
+            seq -= mean
+            if std!=0:
+                seq /= std
+            final_seq = np.concatenate((seq, [lat, lng, total_recover, total_death, mean, std]))
+            arraydata.append(final_seq)
+    
+    np.savetxt('data.csv', arraydata, delimiter=',')
+    '''
+    arraydata = np.loadtxt('data.csv', delimiter=',')
+    
     arraydata = torch.tensor(arraydata, dtype=torch.float)
     #split or not
     dataset = datasets(arraydata)
@@ -71,8 +88,19 @@ def prepare_data(data,window):
     test_len = dataset.__len__()-train_len
     train_data, test_data = random_split(dataset,[train_len,test_len])
     return train_data, test_data
-            
-
+  
+def get_location_using_baidu(address):
+    url = 'http://api.map.baidu.com/geocoder/v2/'
+    output = 'json'
+    ak = '2OBdehyusfGE2KRAvik4jhzb0gQ1VgfA'
+    address = quote(address)
+    uri = url + '?' + 'address=' + address  + '&output=' + output + '&ak=' + ak
+    req = urlopen(uri)
+    res = req.read().decode() 
+    temp = json.loads(res)
+    lat = temp['result']['location']['lat']
+    lng = temp['result']['location']['lng']
+    return lat,lng          
 
 
 
