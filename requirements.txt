@@ -3,3 +3,5 @@ bs4
 pandas
 twython
 TwitterSearch
+lxml
+selenium
