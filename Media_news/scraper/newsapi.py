@@ -67,3 +67,26 @@ def twitterapi_summaries(query, location):
         print(e)
 
 
+def twitter_std_api_summaries(query, location):
+    try:
+        query = query + '+' + location
+        url = 'https://api.twitter.com/1.1/search/tweets.json?q={}'.format(query)
+        r = requests.get(url)
+        news_summaries = []
+        # this is where the fun actually starts :)
+        n = 0
+        for tweet in ts.search_tweets_iterable(tso):
+            if n < 10:
+                # print('@%s tweeted: %s' % (tweet['user']['screen_name'], tweet['text'], tweet['created_at']))
+                news_summaries.append({'user': tweet['user']['screen_name'],
+                                       'description': tweet['text'],
+                                       'publishTime': tweet['created_at']})
+                n += 1
+            else:
+                break
+
+        return news_summaries, n
+
+    except TwitterSearchException as e:  # take care of all those ugly errors if there are some
+        print(e)
+
