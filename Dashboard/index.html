@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>RMDS 2019-NCOV</title>
+        
+        <link rel="shortcut icon" href="icon/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/themes/light/main.css">
+        <link rel="stylesheet" href="css/rmds-main.css?1">
+        <script src="js/papaparse.js"></script>
+        <script src="js/echarts.js"></script>
+        <script src="https://js.arcgis.com/4.14/"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <section class="navigation">
+            <div class="nav-container">
+              <div class="brand">
+                <a href="https://grmds.org/project-coronavirus">GRMDS COVID-19 Project</a>
+              </div>
+              <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                  <li>
+                    <a href="https://grmds.org">Home</a>
+                  </li>
+                  <li>
+                    <a href="#!">Highlights</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="https://grmds.org/project-coronavirus" target="_blank">Project Coronavirus</a>
+                        </li>
+                        <li>
+                            <a href="https://grmds.org/webinar_march_2020" target="_blank">Upcoming Webinar</a>
+                        </li>
+                        <li>
+                            <a href="https://grmds.org/calendar" target="_blank">Events Calendar</a>
+                        </li>
+                        <li>
+                            <a href="https://grmds.org/IMData-2020" target="_blank">Annual Conference</a>
+                        </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#!">Services</a>
+                    <ul class="nav-dropdown">
+                      <li>
+                        <a href="https://grmds.org/events">Monthly Events</a>
+                      </li>
+                      <li>
+                        <a href="https://grmds.org/webinar">Coronavirus Webinar</a>
+                      </li>
+                      <li>
+                        <a href="https://grmds.org/IMData-2019">IM Data 2019</a>
+                      </li>
+                      <li>
+                        <a href="https://grmds.org/competition">Data Science Compentition 2019</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="https://grmds.org/resources">Resources</a>
+                  </li>
+                  <li>
+                    <a href="https://grmds.org/trainings">Learning</a>
+                  </li>
+                  <li>
+                    <a href="https://grmds.org/about">About</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+        
+        <div id="rmdsMainContainer">
+            <div id="viewLeftDiv">
+                <div id="chart-1"></div>
+                <div id="chart-2"></div>
+            </div>
+            <div id="viewRightDiv"></div>
+        </div>
+    </body>
+    
+    <script src="js/main.js?1"></script>
+    
+</html>
