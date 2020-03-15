@@ -1,0 +1,673 @@
+﻿province,locationName,locationEnglishName,confirmedCount,suspectedCount,curedCount,deadCount,updateTime,Country/Region
+Chongqing,重庆市,Chongqing,576,0.0,570,6,2020-03-15 11:37:10.875,China
+Gansu,甘肃省,Gansu,132,0.0,91,2,2020-03-15 10:03:21.082,China
+Jiangsu,江苏省,Jiangsu,631,0.0,631,0,2020-03-15 09:47:45.850,China
+Sichuan,四川省,Sichuan,539,0.0,515,3,2020-03-15 09:41:11.222,China
+Guangdong,广东省,Guangdong,1357,0.0,1303,8,2020-03-15 09:33:29.555,China
+Zhejiang,浙江省,Zhejiang,1231,0.0,1211,1,2020-03-15 09:23:34.402,China
+Beijing,北京市,Beijing,442,0.0,353,8,2020-03-15 09:11:28.429,China
+Hubei,湖北省,Hubei,67794,0.0,54278,3085,2020-03-15 08:49:13.790,China
+Heilongjiang,黑龙江省,Heilongjiang,482,0.0,453,13,2020-03-15 08:15:18.221,China
+Gansu,甘肃省,Gansu,132,0.0,89,2,2020-03-15 07:57:42.402,China
+Shanghai,上海市,Shanghai,353,0.0,324,3,2020-03-15 07:53:21.051,China
+Chongqing,重庆市,Chongqing,576,0.0,569,6,2020-03-15 07:34:42.863,China
+Yunnan,云南省,Yunnan,174,0.0,172,2,2020-03-15 07:25:57.909,China
+Chongqing,万州区,Wanzhou District,118,0.0,114,4,2020-03-15 11:37:10.875,China
+Chongqing,江北区,Jiangbei District,28,0.0,28,0,2020-03-15 11:37:10.875,China
+Chongqing,云阳县,Yunyang County,25,0.0,25,0,2020-03-15 11:37:10.875,China
+Chongqing,合川区,Hechuan District,23,0.0,23,0,2020-03-15 11:37:10.875,China
+Chongqing,綦江区,Qijiang District,23,0.0,23,0,2020-03-15 11:37:10.875,China
+Chongqing,长寿区,Changshou District,22,0.0,22,0,2020-03-15 11:37:10.875,China
+Chongqing,奉节县,Fengjie County,22,0.0,22,0,2020-03-15 11:37:10.875,China
+Chongqing,九龙坡区,Jiulongpo District,21,0.0,20,1,2020-03-15 11:37:10.875,China
+Chongqing,开州区,Kaizhou District,21,0.0,20,1,2020-03-15 11:37:10.875,China
+Chongqing,忠县,Zhong County,21,0.0,21,0,2020-03-15 11:37:10.875,China
+Chongqing,渝中区,Yuzhong District,20,0.0,20,0,2020-03-15 11:37:10.875,China
+Chongqing,垫江县,Dianjiang County,20,0.0,20,0,2020-03-15 11:37:10.875,China
+Chongqing,潼南区,Tongnan District,18,0.0,18,0,2020-03-15 11:37:10.875,China
+Chongqing,渝北区,Yubei District,17,0.0,17,0,2020-03-15 11:37:10.875,China
+Chongqing,两江新区,Liangjiang New Area,17,0.0,17,0,2020-03-15 11:37:10.875,China
+Chongqing,南岸区,Nan'an District,15,0.0,15,0,2020-03-15 11:37:10.875,China
+Chongqing,石柱县,Shizhu Tujia Autonomous County,15,0.0,15,0,2020-03-15 11:37:10.875,China
+Chongqing,大足区,Dazu District,14,0.0,14,0,2020-03-15 11:37:10.875,China
+Chongqing,巫溪县,Wuxi County,14,0.0,14,0,2020-03-15 11:37:10.875,China
+Chongqing,铜梁区,Tongliang District,10,0.0,10,0,2020-03-15 11:37:10.875,China
+Chongqing,丰都县,Fengdu County,10,0.0,10,0,2020-03-15 11:37:10.875,China
+Chongqing,巫山县,Wushan County,10,0.0,10,0,2020-03-15 11:37:10.875,China
+Chongqing,沙坪坝区,Shapingba District,9,0.0,9,0,2020-03-15 11:37:10.875,China
+Chongqing,璧山区,Bishan District,9,0.0,9,0,2020-03-15 11:37:10.875,China
+Chongqing,荣昌区,Rongchang District,9,0.0,9,0,2020-03-15 11:37:10.875,China
+Chongqing,大渡口区,Dadukou District,7,0.0,7,0,2020-03-15 11:37:10.875,China
+Chongqing,巴南区,Banan District,6,0.0,6,0,2020-03-15 11:37:10.875,China
+Chongqing,涪陵区,Fuling District,5,0.0,5,0,2020-03-15 11:37:10.875,China
+Chongqing,永川区,Yongchuan District,5,0.0,5,0,2020-03-15 11:37:10.875,China
+Chongqing,江津区,Jiangjin District,4,0.0,4,0,2020-03-15 11:37:10.875,China
+Chongqing,梁平区,Liangping District,4,0.0,4,0,2020-03-15 11:37:10.875,China
+Chongqing,高新区,Chongqing High-tech Zone,4,0.0,4,0,2020-03-15 11:37:10.875,China
+Chongqing,黔江区,Qianjiang Tujia and Miao Autonomous County,2,0.0,2,0,2020-03-15 11:37:10.875,China
+Chongqing,城口县,Chengkou County,2,0.0,2,0,2020-03-15 11:37:10.875,China
+Chongqing,彭水县,Pengshui Miao and Tujia Autonomous County,2,0.0,2,0,2020-03-15 11:37:10.875,China
+Chongqing,武隆区,Wulong District,1,0.0,1,0,2020-03-15 11:37:10.875,China
+Chongqing,秀山县,Xiushan Tujia and Miao Autonomous County,1,0.0,1,0,2020-03-15 11:37:10.875,China
+Chongqing,酉阳县,Youyang Tujia and Miao Autonomous County,1,0.0,1,0,2020-03-15 11:37:10.875,China
+Chongqing,万盛经开区,Wansheng District,1,0.0,1,0,2020-03-15 11:37:10.875,China
+Gansu,境外输入人员,,41,0.0,2,0,2020-03-15 10:03:21.082,China
+Gansu,兰州,Lanzhou,36,0.0,34,2,2020-03-15 10:03:21.082,China
+Gansu,天水,Tianshui,12,0.0,12,0,2020-03-15 10:03:21.082,China
+Gansu,平凉,Pingliang,9,0.0,9,0,2020-03-15 10:03:21.082,China
+Gansu,定西,Dingxi,9,0.0,9,0,2020-03-15 10:03:21.082,China
+Gansu,甘南,Gannan,8,0.0,8,0,2020-03-15 10:03:21.082,China
+Gansu,白银,Baiyin,4,0.0,4,0,2020-03-15 10:03:21.082,China
+Gansu,陇南,Longnan,4,0.0,4,0,2020-03-15 10:03:21.082,China
+Gansu,庆阳,Qingyang,3,0.0,3,0,2020-03-15 10:03:21.082,China
+Gansu,临夏,Linxia,3,0.0,3,0,2020-03-15 10:03:21.082,China
+Gansu,张掖,Zhangye,2,0.0,2,0,2020-03-15 10:03:21.082,China
+Gansu,金昌,Jinchang,1,0.0,1,0,2020-03-15 10:03:21.082,China
+Jiangsu,南京,Nanjing,93,0.0,93,0,2020-03-15 09:47:45.850,China
+Jiangsu,苏州,Suzhou,87,0.0,87,0,2020-03-15 09:47:45.850,China
+Jiangsu,徐州,Xuzhou,79,0.0,79,0,2020-03-15 09:47:45.850,China
+Jiangsu,淮安,Huainan,66,0.0,66,0,2020-03-15 09:47:45.850,China
+Jiangsu,无锡,Wuxi,55,0.0,55,0,2020-03-15 09:47:45.850,China
+Jiangsu,常州,Changzhou,51,0.0,51,0,2020-03-15 09:47:45.850,China
+Jiangsu,连云港,Lianyungang,48,0.0,48,0,2020-03-15 09:47:45.850,China
+Jiangsu,南通,Nantong,40,0.0,40,0,2020-03-15 09:47:45.850,China
+Jiangsu,泰州,Taizhou,37,0.0,37,0,2020-03-15 09:47:45.850,China
+Jiangsu,盐城,Yancheng,27,0.0,27,0,2020-03-15 09:47:45.850,China
+Jiangsu,扬州,Yangzhou,23,0.0,23,0,2020-03-15 09:47:45.850,China
+Jiangsu,宿迁,Suqian,13,0.0,13,0,2020-03-15 09:47:45.850,China
+Jiangsu,镇江,Zhenjiang,12,0.0,12,0,2020-03-15 09:47:45.850,China
+Sichuan,成都,Chengdu,144,0.0,122,3,2020-03-15 09:41:11.222,China
+Sichuan,甘孜州,Garzê Tibetan Autonomous Prefecture,78,0.0,76,0,2020-03-15 09:41:11.222,China
+Sichuan,达州,Dazhou,42,0.0,42,0,2020-03-15 09:41:11.222,China
+Sichuan,南充,Nanchong,39,0.0,39,0,2020-03-15 09:41:11.222,China
+Sichuan,广安,Guang'an,30,0.0,30,0,2020-03-15 09:41:11.222,China
+Sichuan,泸州,Luzhou,24,0.0,24,0,2020-03-15 09:41:11.222,China
+Sichuan,巴中,Bazhong,24,0.0,24,0,2020-03-15 09:41:11.222,China
+Sichuan,绵阳,Mianyang,22,0.0,22,0,2020-03-15 09:41:11.222,China
+Sichuan,内江,Neijiang,22,0.0,22,0,2020-03-15 09:41:11.222,China
+Sichuan,德阳,Deyang,18,0.0,18,0,2020-03-15 09:41:11.222,China
+Sichuan,遂宁,Suining,17,0.0,17,0,2020-03-15 09:41:11.222,China
+Sichuan,攀枝花,Panzhihua,16,0.0,16,0,2020-03-15 09:41:11.222,China
+Sichuan,凉山州,Liangshan Yi Autonomous Prefecture,13,0.0,13,0,2020-03-15 09:41:11.222,China
+Sichuan,宜宾,Yibin,12,0.0,12,0,2020-03-15 09:41:11.222,China
+Sichuan,自贡,Zigong,9,0.0,9,0,2020-03-15 09:41:11.222,China
+Sichuan,眉山,Meishan,8,0.0,8,0,2020-03-15 09:41:11.222,China
+Sichuan,雅安,Ya'an,7,0.0,7,0,2020-03-15 09:41:11.222,China
+Sichuan,广元,Guangyuan,6,0.0,6,0,2020-03-15 09:41:11.222,China
+Sichuan,资阳,Ziyang,4,0.0,4,0,2020-03-15 09:41:11.222,China
+Sichuan,乐山,Leshan,3,0.0,3,0,2020-03-15 09:41:11.222,China
+Sichuan,阿坝州,Ngawa Tibetan and Qiang Autonomous Prefecture,1,0.0,1,0,2020-03-15 09:41:11.222,China
+Guangdong,深圳,Shenzhen,421,0.0,395,3,2020-03-15 09:33:29.555,China
+Guangdong,广州,Guangzhou,347,0.0,330,1,2020-03-15 09:33:29.555,China
+Guangdong,佛山,Foshan,84,0.0,78,0,2020-03-15 09:33:29.555,China
+Guangdong,中山,Zhongshan,68,0.0,64,0,2020-03-15 09:33:29.555,China
+Guangdong,东莞,Dongguan,100,0.0,96,1,2020-03-15 09:33:29.555,China
+Guangdong,汕头,Shantou,25,0.0,24,0,2020-03-15 09:33:29.555,China
+Guangdong,珠海,Zhuhai,98,0.0,97,1,2020-03-15 09:33:29.555,China
+Guangdong,惠州,Huizhou,62,0.0,62,0,2020-03-15 09:33:29.555,China
+Guangdong,江门,Jiangmen,23,0.0,23,0,2020-03-15 09:33:29.555,China
+Guangdong,湛江,Zhanjiang,22,0.0,22,0,2020-03-15 09:33:29.555,China
+Guangdong,肇庆,Zhaoqing,19,0.0,18,1,2020-03-15 09:33:29.555,China
+Guangdong,梅州,Meizhou,16,0.0,16,0,2020-03-15 09:33:29.555,China
+Guangdong,阳江,Yangjiang,14,0.0,14,0,2020-03-15 09:33:29.555,China
+Guangdong,茂名,Maoming,14,0.0,14,0,2020-03-15 09:33:29.555,China
+Guangdong,清远,Qingyuan,12,0.0,12,0,2020-03-15 09:33:29.555,China
+Guangdong,韶关,Shaoguan,10,0.0,9,1,2020-03-15 09:33:29.555,China
+Guangdong,揭阳,Jieyang,8,0.0,8,0,2020-03-15 09:33:29.555,China
+Guangdong,汕尾,Shanwei,5,0.0,5,0,2020-03-15 09:33:29.555,China
+Guangdong,潮州,Chaozhou,5,0.0,5,0,2020-03-15 09:33:29.555,China
+Guangdong,河源,Heyuan,4,0.0,4,0,2020-03-15 09:33:29.555,China
+Guangdong,待明确地区,Area not defined,0,0.0,7,0,2020-03-15 09:33:29.555,China
+Zhejiang,丽水,Lishui,28,0.0,18,0,2020-03-15 09:23:34.402,China
+Zhejiang,杭州,Hangzhou,182,0.0,179,0,2020-03-15 09:23:34.402,China
+Zhejiang,温州,Wenzhou,504,0.0,501,1,2020-03-15 09:23:34.402,China
+Zhejiang,湖州,Huzhou,12,0.0,10,0,2020-03-15 09:23:34.402,China
+Zhejiang,嘉兴,Jiaxing,45,0.0,44,0,2020-03-15 09:23:34.402,China
+Zhejiang,绍兴,Shaoxing,42,0.0,41,0,2020-03-15 09:23:34.402,China
+Zhejiang,宁波,Ningbo,157,0.0,157,0,2020-03-15 09:23:34.402,China
+Zhejiang,台州,Taizhou,146,0.0,146,0,2020-03-15 09:23:34.402,China
+Zhejiang,金华,Jinhua,55,0.0,55,0,2020-03-15 09:23:34.402,China
+Zhejiang,省十里丰监狱,Shilifeng Prison,36,0.0,36,0,2020-03-15 09:23:34.402,China
+Zhejiang,衢州,Quzhou,14,0.0,14,0,2020-03-15 09:23:34.402,China
+Zhejiang,舟山,Zhoushan,10,0.0,10,0,2020-03-15 09:23:34.402,China
+Beijing,朝阳区,Chaoyang District,72,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,海淀区,Haidian District,63,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,西城区,Xicheng District,53,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,丰台区,Fengtai District,43,0.0,3,0,2020-03-15 09:11:28.429,China
+Beijing,境外输入人员,,27,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,大兴区,Daxing District,39,0.0,16,0,2020-03-15 09:11:28.429,China
+Beijing,外地来京人员,People from other cities,25,0.0,2,0,2020-03-15 09:11:28.429,China
+Beijing,昌平区,Changping District,29,0.0,10,0,2020-03-15 09:11:28.429,China
+Beijing,通州区,Tongzhou District,19,0.0,1,0,2020-03-15 09:11:28.429,China
+Beijing,房山区,Fangshan District,16,0.0,3,0,2020-03-15 09:11:28.429,China
+Beijing,东城区,Dongcheng District,14,0.0,1,0,2020-03-15 09:11:28.429,China
+Beijing,石景山区,Shijingshan District,14,0.0,1,0,2020-03-15 09:11:28.429,China
+Beijing,顺义区,Shunyi District,10,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,怀柔区,Huairou District,7,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,密云区,Miyun District,7,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,门头沟区,Mentougou District,3,0.0,2,0,2020-03-15 09:11:28.429,China
+Beijing,延庆区,Yanqing District,1,0.0,0,0,2020-03-15 09:11:28.429,China
+Beijing,待明确地区,Area not defined,0,0.0,314,8,2020-03-15 09:11:28.429,China
+Hubei,武汉,Wuhan,49995,0.0,36465,2446,2020-03-15 08:49:13.790,China
+Hubei,孝感,Xiaogan,3518,0.0,3237,126,2020-03-15 08:49:13.790,China
+Hubei,鄂州,Ezhou,1394,0.0,1212,57,2020-03-15 08:49:13.790,China
+Hubei,随州,Suizhou,1307,0.0,1192,45,2020-03-15 08:49:13.790,China
+Hubei,荆州,Jingzhou,1580,0.0,1474,50,2020-03-15 08:49:13.790,China
+Hubei,黄冈,Huanggang,2907,0.0,2730,125,2020-03-15 08:49:13.790,China
+Hubei,宜昌,Yichang,931,0.0,858,36,2020-03-15 08:49:13.790,China
+Hubei,十堰,Shiyan,672,0.0,629,8,2020-03-15 08:49:13.790,China
+Hubei,黄石,Huangshi,1015,0.0,943,38,2020-03-15 08:49:13.790,China
+Hubei,仙桃,Xiantao,575,0.0,520,22,2020-03-15 08:49:13.790,China
+Hubei,荆门,Jingmen,928,0.0,860,39,2020-03-15 08:49:13.790,China
+Hubei,襄阳,Xiangyang,1175,0.0,1115,38,2020-03-15 08:49:13.790,China
+Hubei,恩施州,Enshi Tujia and Miao Autonomous Prefecture,252,0.0,238,7,2020-03-15 08:49:13.790,China
+Hubei,潜江,Qianjiang,198,0.0,182,9,2020-03-15 08:49:13.790,China
+Hubei,天门,Tianmen,496,0.0,476,15,2020-03-15 08:49:13.790,China
+Hubei,咸宁,Xianning,836,0.0,818,14,2020-03-15 08:49:13.790,China
+Hubei,神农架林区,Shennongjia,11,0.0,11,0,2020-03-15 08:49:13.790,China
+Heilongjiang,哈尔滨,Harbin,198,0.0,187,4,2020-03-15 08:15:18.221,China
+Heilongjiang,绥化,Suihua,47,0.0,41,4,2020-03-15 08:15:18.221,China
+Heilongjiang,齐齐哈尔,Qiqihar,43,0.0,40,1,2020-03-15 08:15:18.221,China
+Heilongjiang,大庆,Daqing,26,0.0,23,1,2020-03-15 08:15:18.221,China
+Heilongjiang,双鸭山,Shuangyashan,52,0.0,48,3,2020-03-15 08:15:18.221,China
+Heilongjiang,黑河,Heihe,14,0.0,13,0,2020-03-15 08:15:18.221,China
+Heilongjiang,大兴安岭,Daxinganling,3,0.0,2,0,2020-03-15 08:15:18.221,China
+Heilongjiang,鸡西,Jixi,46,0.0,46,0,2020-03-15 08:15:18.221,China
+Heilongjiang,七台河,Qitaihe,17,0.0,17,0,2020-03-15 08:15:18.221,China
+Heilongjiang,佳木斯,Jiamusi,15,0.0,15,0,2020-03-15 08:15:18.221,China
+Heilongjiang,牡丹江,Mudanjiang,15,0.0,15,0,2020-03-15 08:15:18.221,China
+Heilongjiang,鹤岗,Hegang,5,0.0,5,0,2020-03-15 08:15:18.221,China
+Heilongjiang,伊春,Yichun,1,0.0,1,0,2020-03-15 08:15:18.221,China
+Gansu,境外输入人员,,41,0.0,0,0,2020-03-15 07:57:42.402,China
+Gansu,兰州,Lanzhou,36,0.0,34,2,2020-03-15 07:57:42.402,China
+Gansu,天水,Tianshui,12,0.0,12,0,2020-03-15 07:57:42.402,China
+Gansu,平凉,Pingliang,9,0.0,9,0,2020-03-15 07:57:42.402,China
+Gansu,定西,Dingxi,9,0.0,9,0,2020-03-15 07:57:42.402,China
+Gansu,甘南,Gannan,8,0.0,8,0,2020-03-15 07:57:42.402,China
+Gansu,白银,Baiyin,4,0.0,4,0,2020-03-15 07:57:42.402,China
+Gansu,陇南,Longnan,4,0.0,4,0,2020-03-15 07:57:42.402,China
+Gansu,庆阳,Qingyang,3,0.0,3,0,2020-03-15 07:57:42.402,China
+Gansu,临夏,Linxia,3,0.0,3,0,2020-03-15 07:57:42.402,China
+Gansu,张掖,Zhangye,2,0.0,2,0,2020-03-15 07:57:42.402,China
+Gansu,金昌,Jinchang,1,0.0,1,0,2020-03-15 07:57:42.402,China
+Shanghai,境外输入人员,,15,0.0,0,0,2020-03-15 07:53:21.051,China
+Shanghai,外地来沪人员,People from other cities,111,0.0,106,1,2020-03-15 07:53:21.051,China
+Shanghai,浦东新区,Pudong District,61,0.0,59,0,2020-03-15 07:53:21.051,China
+Shanghai,宝山区,Baoshan District,21,0.0,19,0,2020-03-15 07:53:21.051,China
+Shanghai,嘉定区,Jiading District,9,0.0,7,0,2020-03-15 07:53:21.051,China
+Shanghai,徐汇区,Xuhui District,18,0.0,17,0,2020-03-15 07:53:21.051,China
+Shanghai,静安区,Jing'an District,16,0.0,15,0,2020-03-15 07:53:21.051,China
+Shanghai,黄浦区,Huangpu District,6,0.0,5,0,2020-03-15 07:53:21.051,China
+Shanghai,闵行区,Minhang District,19,0.0,19,0,2020-03-15 07:53:21.051,China
+Shanghai,松江区,Songjiang District,14,0.0,14,0,2020-03-15 07:53:21.051,China
+Shanghai,长宁区,Changning District,13,0.0,13,0,2020-03-15 07:53:21.051,China
+Shanghai,普陀区,Putuo District,11,0.0,11,0,2020-03-15 07:53:21.051,China
+Shanghai,杨浦区,Yangpu District,9,0.0,9,0,2020-03-15 07:53:21.051,China
+Shanghai,奉贤区,Fengxian District,9,0.0,9,0,2020-03-15 07:53:21.051,China
+Shanghai,虹口区,Hongkou District,7,0.0,7,0,2020-03-15 07:53:21.051,China
+Shanghai,青浦区,Qingpu District,6,0.0,6,0,2020-03-15 07:53:21.051,China
+Shanghai,金山区,Jinshan District,4,0.0,4,0,2020-03-15 07:53:21.051,China
+Shanghai,崇明区,Chongming District,4,0.0,4,0,2020-03-15 07:53:21.051,China
+Shanghai,待明确地区,Area not defined,0,0.0,0,2,2020-03-15 07:53:21.051,China
+Chongqing,长寿区,Changshou District,22,0.0,21,0,2020-03-15 07:34:42.863,China
+Chongqing,万州区,Wanzhou District,118,0.0,114,4,2020-03-15 07:34:42.863,China
+Chongqing,江北区,Jiangbei District,28,0.0,28,0,2020-03-15 07:34:42.863,China
+Chongqing,云阳县,Yunyang County,25,0.0,25,0,2020-03-15 07:34:42.863,China
+Chongqing,合川区,Hechuan District,23,0.0,23,0,2020-03-15 07:34:42.863,China
+Chongqing,綦江区,Qijiang District,23,0.0,23,0,2020-03-15 07:34:42.863,China
+Chongqing,奉节县,Fengjie County,22,0.0,22,0,2020-03-15 07:34:42.863,China
+Chongqing,九龙坡区,Jiulongpo District,21,0.0,20,1,2020-03-15 07:34:42.863,China
+Chongqing,开州区,Kaizhou District,21,0.0,20,1,2020-03-15 07:34:42.863,China
+Chongqing,忠县,Zhong County,21,0.0,21,0,2020-03-15 07:34:42.863,China
+Chongqing,渝中区,Yuzhong District,20,0.0,20,0,2020-03-15 07:34:42.863,China
+Chongqing,垫江县,Dianjiang County,20,0.0,20,0,2020-03-15 07:34:42.863,China
+Chongqing,潼南区,Tongnan District,18,0.0,18,0,2020-03-15 07:34:42.863,China
+Chongqing,渝北区,Yubei District,17,0.0,17,0,2020-03-15 07:34:42.863,China
+Chongqing,两江新区,Liangjiang New Area,17,0.0,17,0,2020-03-15 07:34:42.863,China
+Chongqing,南岸区,Nan'an District,15,0.0,15,0,2020-03-15 07:34:42.863,China
+Chongqing,石柱县,Shizhu Tujia Autonomous County,15,0.0,15,0,2020-03-15 07:34:42.863,China
+Chongqing,大足区,Dazu District,14,0.0,14,0,2020-03-15 07:34:42.863,China
+Chongqing,巫溪县,Wuxi County,14,0.0,14,0,2020-03-15 07:34:42.863,China
+Chongqing,铜梁区,Tongliang District,10,0.0,10,0,2020-03-15 07:34:42.863,China
+Chongqing,丰都县,Fengdu County,10,0.0,10,0,2020-03-15 07:34:42.863,China
+Chongqing,巫山县,Wushan County,10,0.0,10,0,2020-03-15 07:34:42.863,China
+Chongqing,沙坪坝区,Shapingba District,9,0.0,9,0,2020-03-15 07:34:42.863,China
+Chongqing,璧山区,Bishan District,9,0.0,9,0,2020-03-15 07:34:42.863,China
+Chongqing,荣昌区,Rongchang District,9,0.0,9,0,2020-03-15 07:34:42.863,China
+Chongqing,大渡口区,Dadukou District,7,0.0,7,0,2020-03-15 07:34:42.863,China
+Chongqing,巴南区,Banan District,6,0.0,6,0,2020-03-15 07:34:42.863,China
+Chongqing,涪陵区,Fuling District,5,0.0,5,0,2020-03-15 07:34:42.863,China
+Chongqing,永川区,Yongchuan District,5,0.0,5,0,2020-03-15 07:34:42.863,China
+Chongqing,江津区,Jiangjin District,4,0.0,4,0,2020-03-15 07:34:42.863,China
+Chongqing,梁平区,Liangping District,4,0.0,4,0,2020-03-15 07:34:42.863,China
+Chongqing,高新区,Chongqing High-tech Zone,4,0.0,4,0,2020-03-15 07:34:42.863,China
+Chongqing,黔江区,Qianjiang Tujia and Miao Autonomous County,2,0.0,2,0,2020-03-15 07:34:42.863,China
+Chongqing,城口县,Chengkou County,2,0.0,2,0,2020-03-15 07:34:42.863,China
+Chongqing,彭水县,Pengshui Miao and Tujia Autonomous County,2,0.0,2,0,2020-03-15 07:34:42.863,China
+Chongqing,武隆区,Wulong District,1,0.0,1,0,2020-03-15 07:34:42.863,China
+Chongqing,秀山县,Xiushan Tujia and Miao Autonomous County,1,0.0,1,0,2020-03-15 07:34:42.863,China
+Chongqing,酉阳县,Youyang Tujia and Miao Autonomous County,1,0.0,1,0,2020-03-15 07:34:42.863,China
+Chongqing,万盛经开区,Wansheng District,1,0.0,1,0,2020-03-15 07:34:42.863,China
+Yunnan,昆明,Kunming,53,0.0,53,0,2020-03-15 07:25:57.909,China
+Yunnan,昭通,Zhaotong,25,0.0,25,0,2020-03-15 07:25:57.909,China
+Yunnan,西双版纳,Xishuangbanna,15,0.0,14,1,2020-03-15 07:25:57.909,China
+Yunnan,玉溪,Yuxi,14,0.0,13,1,2020-03-15 07:25:57.909,China
+Yunnan,曲靖,Qujing,13,0.0,13,0,2020-03-15 07:25:57.909,China
+Yunnan,大理州,Dali,13,0.0,13,0,2020-03-15 07:25:57.909,China
+Yunnan,红河州,Honghe,9,0.0,9,0,2020-03-15 07:25:57.909,China
+Yunnan,保山,Baoshan,9,0.0,9,0,2020-03-15 07:25:57.909,China
+Yunnan,丽江,Lijiang,7,0.0,7,0,2020-03-15 07:25:57.909,China
+Yunnan,德宏州,Dehong,5,0.0,5,0,2020-03-15 07:25:57.909,China
+Yunnan,普洱,Pu'er,4,0.0,4,0,2020-03-15 07:25:57.909,China
+Yunnan,楚雄州,Chuxiong,4,0.0,4,0,2020-03-15 07:25:57.909,China
+Yunnan,文山州,Wenshan,2,0.0,2,0,2020-03-15 07:25:57.909,China
+Yunnan,临沧,Lincang,1,0.0,1,0,2020-03-15 07:25:57.909,China
+,,Thailand,82,,35,1,2020-03-14 00:00:00,Thailand
+,,Japan,773,,118,22,2020-03-14 00:00:00,Japan
+,,Singapore,212,,105,0,2020-03-14 00:00:00,Singapore
+,,Nepal,1,,1,0,2020-03-14 00:00:00,Nepal
+,,Malaysia,238,,35,0,2020-03-14 00:00:00,Malaysia
+,,British Columbia,64,,4,1,2020-03-14 00:00:00,Canada
+,,New South Wales,112,,4,2,2020-03-14 00:00:00,Australia
+,,Victoria,49,,8,0,2020-03-14 00:00:00,Australia
+,,Queensland,46,,8,0,2020-03-14 00:00:00,Australia
+,,Cambodia,7,,1,0,2020-03-14 00:00:00,Cambodia
+,,Sri Lanka,10,,1,0,2020-03-14 00:00:00,Sri Lanka
+,,Germany,4585,,46,9,2020-03-14 00:00:00,Germany
+,,Finland,225,,1,0,2020-03-14 00:00:00,Finland
+,,United Arab Emirates,85,,17,0,2020-03-14 00:00:00,United Arab Emirates
+,,Philippines,111,,2,8,2020-03-14 00:00:00,Philippines
+,,India,102,,4,2,2020-03-14 00:00:00,India
+,,Italy,21157,,1966,1441,2020-03-14 00:00:00,Italy
+,,Sweden,961,,1,2,2020-03-14 00:00:00,Sweden
+,,Spain,6391,,517,195,2020-03-14 00:00:00,Spain
+,,South Australia,19,,3,0,2020-03-14 00:00:00,Australia
+,,Belgium,689,,1,4,2020-03-14 00:00:00,Belgium
+,,Egypt,109,,27,2,2020-03-14 00:00:00,Egypt
+,,From Diamond Princess,0,,0,0,2020-03-14 00:00:00,Australia
+,,Lebanon,93,,1,3,2020-03-14 00:00:00,Lebanon
+,,Iraq,110,,26,10,2020-03-14 00:00:00,Iraq
+,,Oman,19,,9,0,2020-03-14 00:00:00,Oman
+,,Afghanistan,11,,0,0,2020-03-14 00:00:00,Afghanistan
+,,Bahrain,210,,44,0,2020-03-14 00:00:00,Bahrain
+,,Kuwait,104,,5,0,2020-03-14 00:00:00,Kuwait
+,,Algeria,37,,12,3,2020-03-14 00:00:00,Algeria
+,,Croatia,38,,1,0,2020-03-14 00:00:00,Croatia
+,,Switzerland,1359,,4,13,2020-03-14 00:00:00,Switzerland
+,,Austria,655,,6,1,2020-03-14 00:00:00,Austria
+,,Israel,193,,4,0,2020-03-14 00:00:00,Israel
+,,Pakistan,31,,2,0,2020-03-14 00:00:00,Pakistan
+,,Brazil,151,,0,0,2020-03-14 00:00:00,Brazil
+,,Georgia,30,,0,0,2020-03-14 00:00:00,Georgia
+,,Greece,228,,8,3,2020-03-14 00:00:00,Greece
+,,North Macedonia,14,,1,0,2020-03-14 00:00:00,North Macedonia
+,,Norway,1090,,1,3,2020-03-14 00:00:00,Norway
+,,Romania,123,,9,0,2020-03-14 00:00:00,Romania
+,,Estonia,115,,0,0,2020-03-14 00:00:00,Estonia
+,,Netherlands,959,,2,12,2020-03-14 00:00:00,Netherlands
+,,San Marino,80,,4,5,2020-03-14 00:00:00,San Marino
+,,Belarus,27,,3,0,2020-03-14 00:00:00,Belarus
+,,Iceland,156,,1,0,2020-03-14 00:00:00,Iceland
+,,Lithuania,8,,0,0,2020-03-14 00:00:00,Lithuania
+,,Mexico,26,,4,0,2020-03-14 00:00:00,Mexico
+,,New Zealand,6,,0,0,2020-03-14 00:00:00,New Zealand
+,,Nigeria,2,,0,0,2020-03-14 00:00:00,Nigeria
+,,Western Australia,17,,0,1,2020-03-14 00:00:00,Australia
+,,Ireland,129,,0,2,2020-03-14 00:00:00,Ireland
+,,Luxembourg,51,,0,1,2020-03-14 00:00:00,Luxembourg
+,,Monaco,2,,0,0,2020-03-14 00:00:00,Monaco
+,,Qatar,337,,4,0,2020-03-14 00:00:00,Qatar
+,,Ecuador,28,,0,2,2020-03-14 00:00:00,Ecuador
+,,Azerbaijan,15,,3,1,2020-03-14 00:00:00,Azerbaijan
+,,Armenia,18,,0,0,2020-03-14 00:00:00,Armenia
+,,Dominican Republic,11,,0,0,2020-03-14 00:00:00,Dominican Republic
+,,Indonesia,96,,8,5,2020-03-14 00:00:00,Indonesia
+,,Portugal,169,,2,0,2020-03-14 00:00:00,Portugal
+,,Andorra,1,,1,0,2020-03-14 00:00:00,Andorra
+,,Tasmania,5,,0,0,2020-03-14 00:00:00,Australia
+,,Latvia,26,,1,0,2020-03-14 00:00:00,Latvia
+,,Morocco,17,,1,1,2020-03-14 00:00:00,Morocco
+,,Saudi Arabia,103,,1,0,2020-03-14 00:00:00,Saudi Arabia
+,,Senegal,10,,1,0,2020-03-14 00:00:00,Senegal
+,,Argentina,34,,1,2,2020-03-14 00:00:00,Argentina
+,,Chile,61,,0,0,2020-03-14 00:00:00,Chile
+,,Jordan,1,,1,0,2020-03-14 00:00:00,Jordan
+,,Ukraine,3,,0,1,2020-03-14 00:00:00,Ukraine
+,,Hungary,30,,1,0,2020-03-14 00:00:00,Hungary
+,,Northern Territory,1,,0,0,2020-03-14 00:00:00,Australia
+,,Liechtenstein,4,,0,0,2020-03-14 00:00:00,Liechtenstein
+,,Poland,103,,0,3,2020-03-14 00:00:00,Poland
+,,Tunisia,18,,0,0,2020-03-14 00:00:00,Tunisia
+,,Bosnia and Herzegovina,18,,0,0,2020-03-14 00:00:00,Bosnia and Herzegovina
+,,Slovenia,181,,0,1,2020-03-14 00:00:00,Slovenia
+,,South Africa,38,,0,0,2020-03-14 00:00:00,South Africa
+,,Bhutan,1,,0,0,2020-03-14 00:00:00,Bhutan
+,,Cameroon,2,,0,0,2020-03-14 00:00:00,Cameroon
+,,Colombia,22,,0,0,2020-03-14 00:00:00,Colombia
+,,Costa Rica,26,,0,0,2020-03-14 00:00:00,Costa Rica
+,,Peru,38,,0,0,2020-03-14 00:00:00,Peru
+,,Serbia,46,,0,0,2020-03-14 00:00:00,Serbia
+,,Slovakia,44,,0,0,2020-03-14 00:00:00,Slovakia
+,,Togo,1,,0,0,2020-03-14 00:00:00,Togo
+,,French Guiana,5,,0,0,2020-03-14 00:00:00,French Guiana
+,,Malta,18,,1,0,2020-03-14 00:00:00,Malta
+,,Martinique,9,,0,0,2020-03-14 00:00:00,Martinique
+,,Bulgaria,41,,0,2,2020-03-14 00:00:00,Bulgaria
+,,Maldives,10,,0,0,2020-03-14 00:00:00,Maldives
+,,Bangladesh,3,,0,0,2020-03-14 00:00:00,Bangladesh
+,,Paraguay,6,,0,0,2020-03-14 00:00:00,Paraguay
+,,Ontario,79,,4,0,2020-03-14 00:00:00,Canada
+,,Alberta,29,,0,0,2020-03-14 00:00:00,Canada
+,,Quebec,17,,0,0,2020-03-14 00:00:00,Canada
+,,Albania,38,,0,1,2020-03-14 00:00:00,Albania
+,,Cyprus,26,,0,0,2020-03-14 00:00:00,Cyprus
+,,Brunei,40,,0,0,2020-03-14 00:00:00,Brunei
+,,Washington,572,,1,37,2020-03-14 00:00:00,US
+,,New York,525,,0,2,2020-03-14 00:00:00,US
+,,California,340,,6,5,2020-03-14 00:00:00,US
+,,Massachusetts,138,,1,0,2020-03-14 00:00:00,US
+,,Diamond Princess,46,,0,0,2020-03-14 00:00:00,US
+,,Grand Princess,21,,0,0,2020-03-14 00:00:00,US
+,,Georgia,66,,0,1,2020-03-14 00:00:00,US
+,,Colorado,101,,0,1,2020-03-14 00:00:00,US
+,,Florida,76,,0,3,2020-03-14 00:00:00,US
+,,New Jersey,69,,0,1,2020-03-14 00:00:00,US
+,,Oregon,32,,0,0,2020-03-14 00:00:00,US
+,,Texas,57,,0,0,2020-03-14 00:00:00,US
+,,Illinois,64,,2,0,2020-03-14 00:00:00,US
+,,Pennsylvania,47,,0,0,2020-03-14 00:00:00,US
+,,Iowa,17,,0,0,2020-03-14 00:00:00,US
+,,Maryland,26,,0,0,2020-03-14 00:00:00,US
+,,North Carolina,24,,0,0,2020-03-14 00:00:00,US
+,,South Carolina,19,,0,0,2020-03-14 00:00:00,US
+,,Tennessee,32,,0,0,2020-03-14 00:00:00,US
+,,Virginia,41,,0,1,2020-03-14 00:00:00,US
+,,Arizona,12,,1,0,2020-03-14 00:00:00,US
+,,Indiana,16,,0,0,2020-03-14 00:00:00,US
+,,Kentucky,14,,0,0,2020-03-14 00:00:00,US
+,,District of Columbia,10,,0,0,2020-03-14 00:00:00,US
+,,Nevada,21,,0,0,2020-03-14 00:00:00,US
+,,New Hampshire,7,,0,0,2020-03-14 00:00:00,US
+,,Minnesota,21,,0,0,2020-03-14 00:00:00,US
+,,Nebraska,14,,0,0,2020-03-14 00:00:00,US
+,,Ohio,26,,0,0,2020-03-14 00:00:00,US
+,,Rhode Island,20,,0,0,2020-03-14 00:00:00,US
+,,Wisconsin,27,,1,0,2020-03-14 00:00:00,US
+,,Connecticut,22,,0,0,2020-03-14 00:00:00,US
+,,Hawaii,4,,0,0,2020-03-14 00:00:00,US
+,,Oklahoma,4,,0,0,2020-03-14 00:00:00,US
+,,Utah,10,,0,0,2020-03-14 00:00:00,US
+,,Burkina Faso,2,,0,0,2020-03-14 00:00:00,Burkina Faso
+,,Holy See,1,,0,0,2020-03-14 00:00:00,Holy See
+,,Mongolia,1,,0,0,2020-03-14 00:00:00,Mongolia
+,,Panama,36,,0,1,2020-03-14 00:00:00,Panama
+,,Kansas,8,,0,1,2020-03-14 00:00:00,US
+,,Louisiana,77,,0,1,2020-03-14 00:00:00,US
+,,Missouri,4,,0,0,2020-03-14 00:00:00,US
+,,Vermont,5,,0,0,2020-03-14 00:00:00,US
+,,Alaska,1,,0,0,2020-03-14 00:00:00,US
+,,Arkansas,12,,0,0,2020-03-14 00:00:00,US
+,,Delaware,6,,0,0,2020-03-14 00:00:00,US
+,,Idaho,2,,0,0,2020-03-14 00:00:00,US
+,,Maine,3,,0,0,2020-03-14 00:00:00,US
+,,Michigan,25,,0,0,2020-03-14 00:00:00,US
+,,Mississippi,6,,0,0,2020-03-14 00:00:00,US
+,,Montana,5,,0,0,2020-03-14 00:00:00,US
+,,New Mexico,10,,0,0,2020-03-14 00:00:00,US
+,,North Dakota,1,,0,0,2020-03-14 00:00:00,US
+,,South Dakota,9,,0,1,2020-03-14 00:00:00,US
+,,West Virginia,0,,0,0,2020-03-14 00:00:00,US
+,,Wyoming,2,,0,0,2020-03-14 00:00:00,US
+,,Iran,12729,,2959,611,2020-03-14 00:00:00,Iran
+,,"Korea, South",8086,,510,72,2020-03-14 00:00:00,"Korea, South"
+,,France,4469,,12,91,2020-03-14 00:00:00,France
+,,Diamond Princess,696,,325,7,2020-03-14 00:00:00,Cruise Ship
+,,Denmark,827,,1,1,2020-03-14 00:00:00,Denmark
+,,Czechia,189,,0,0,2020-03-14 00:00:00,Czechia
+,,Taiwan*,53,,20,1,2020-03-14 00:00:00,Taiwan*
+,,Vietnam,53,,16,0,2020-03-14 00:00:00,Vietnam
+,,Russia,59,,8,0,2020-03-14 00:00:00,Russia
+,,Moldova,12,,0,0,2020-03-14 00:00:00,Moldova
+,,Bolivia,10,,0,0,2020-03-14 00:00:00,Bolivia
+,,Faroe Islands,9,,0,0,2020-03-14 00:00:00,Denmark
+,,St Martin,2,,0,0,2020-03-14 00:00:00,France
+,,Honduras,2,,0,0,2020-03-14 00:00:00,Honduras
+,,Channel Islands,2,,0,0,2020-03-14 00:00:00,United Kingdom
+,,New Brunswick,1,,0,0,2020-03-14 00:00:00,Canada
+,,Congo (Kinshasa),2,,0,0,2020-03-14 00:00:00,Congo (Kinshasa)
+,,Cote d'Ivoire,1,,0,0,2020-03-14 00:00:00,Cote d'Ivoire
+,,Saint Barthelemy,1,,0,0,2020-03-14 00:00:00,France
+,,Jamaica,8,,0,0,2020-03-14 00:00:00,Jamaica
+,,Reunion,6,,0,0,2020-03-14 00:00:00,Reunion
+,,Turkey,5,,0,0,2020-03-14 00:00:00,Turkey
+,,Gibraltar,1,,1,0,2020-03-14 00:00:00,United Kingdom
+,,"Kitsap, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Solano, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Santa Cruz, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Napa, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Ventura, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Worcester, MA",0,,0,0,2020-03-14 00:00:00,US
+,,"Gwinnett, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"DeKalb, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Floyd, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Fayette, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Gregg, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"Monmouth, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Burlington, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Camden, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Passaic, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Union, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Eagle, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Larimer, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Arapahoe, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Gunnison, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Kane, IL",0,,0,0,2020-03-14 00:00:00,US
+,,"Monroe, PA",0,,0,0,2020-03-14 00:00:00,US
+,,"Philadelphia, PA",0,,0,0,2020-03-14 00:00:00,US
+,,"Norfolk, VA",0,,0,0,2020-03-14 00:00:00,US
+,,"Arlington, VA",0,,0,0,2020-03-14 00:00:00,US
+,,"Spotsylvania, VA",0,,0,0,2020-03-14 00:00:00,US
+,,"Loudoun, VA",0,,0,0,2020-03-14 00:00:00,US
+,,"Prince George's, MD",0,,0,0,2020-03-14 00:00:00,US
+,,"Pottawattamie, IA",0,,0,0,2020-03-14 00:00:00,US
+,,"Camden, NC",0,,0,0,2020-03-14 00:00:00,US
+,,"Pima, AZ",0,,0,0,2020-03-14 00:00:00,US
+,,"Noble, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Adams, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Boone, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Dane, WI",0,,0,0,2020-03-14 00:00:00,US
+,,"Pierce, WI",0,,0,0,2020-03-14 00:00:00,US
+,,"Cuyahoga, OH",0,,0,0,2020-03-14 00:00:00,US
+,,"Weber, UT",0,,0,0,2020-03-14 00:00:00,US
+,,"Bennington County, VT",0,,0,0,2020-03-14 00:00:00,US
+,,"Carver County, MN",0,,0,0,2020-03-14 00:00:00,US
+,,"Charlotte County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Cherokee County, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Collin County, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"Jefferson County, KY",0,,0,0,2020-03-14 00:00:00,US
+,,"Jefferson Parish, LA",0,,0,0,2020-03-14 00:00:00,US
+,,"Shasta County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Spartanburg County, SC",0,,0,0,2020-03-14 00:00:00,US
+,,"Harrison County, KY",0,,0,0,2020-03-14 00:00:00,US
+,,"Johnson County, IA",0,,0,0,2020-03-14 00:00:00,US
+,,"Berkshire County, MA",0,,0,0,2020-03-14 00:00:00,US
+,,"Davidson County, TN",0,,0,0,2020-03-14 00:00:00,US
+,,"Douglas County, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Fresno County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Harford County, MD",0,,0,0,2020-03-14 00:00:00,US
+,,"Hendricks County, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Hudson County, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Johnson County, KS",0,,0,0,2020-03-14 00:00:00,US
+,,"Kittitas County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Manatee County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Marion County, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Okaloosa County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Polk County, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Riverside County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Shelby County, TN",0,,0,0,2020-03-14 00:00:00,US
+,,"St. Louis County, MO",0,,0,0,2020-03-14 00:00:00,US
+,,"Suffolk County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Ulster County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Volusia County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Fairfax County, VA",0,,0,0,2020-03-14 00:00:00,US
+,,"Rockingham County, NH",0,,0,0,2020-03-14 00:00:00,US
+,,"Washington, D.C.",0,,0,0,2020-03-14 00:00:00,US
+,,"Montgomery County, PA",0,,0,0,2020-03-14 00:00:00,US
+,,"Alameda County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Broward County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Lee County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Pinal County, AZ",0,,0,0,2020-03-14 00:00:00,US
+,,"Rockland County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Saratoga County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Charleston County, SC",0,,0,0,2020-03-14 00:00:00,US
+,,"Clark County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Cobb County, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Davis County, UT",0,,0,0,2020-03-14 00:00:00,US
+,,"El Paso County, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Honolulu County, HI",0,,0,0,2020-03-14 00:00:00,US
+,,"Jackson County, OR ",0,,0,0,2020-03-14 00:00:00,US
+,,"Jefferson County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Kershaw County, SC",0,,0,0,2020-03-14 00:00:00,US
+,,"Klamath County, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Madera County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Pierce County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Tulsa County, OK",0,,0,0,2020-03-14 00:00:00,US
+,,"Douglas County, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Providence County, RI",0,,0,0,2020-03-14 00:00:00,US
+,,"Chatham County, NC",0,,0,0,2020-03-14 00:00:00,US
+,,"Delaware County, PA",0,,0,0,2020-03-14 00:00:00,US
+,,"Douglas County, NE",0,,0,0,2020-03-14 00:00:00,US
+,,"Fayette County, KY",0,,0,0,2020-03-14 00:00:00,US
+,,"Marion County, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Middlesex County, MA",0,,0,0,2020-03-14 00:00:00,US
+,,"Nassau County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Ramsey County, MN",0,,0,0,2020-03-14 00:00:00,US
+,,"Washoe County, NV",0,,0,0,2020-03-14 00:00:00,US
+,,"Wayne County, PA",0,,0,0,2020-03-14 00:00:00,US
+,,"Yolo County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Santa Clara County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Clark County, NV",0,,0,0,2020-03-14 00:00:00,US
+,,"Fort Bend County, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"Grant County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Santa Rosa County, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Williamson County, TN",0,,0,0,2020-03-14 00:00:00,US
+,,"New York County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Montgomery County, MD",0,,0,0,2020-03-14 00:00:00,US
+,,"Suffolk County, MA",0,,0,0,2020-03-14 00:00:00,US
+,,"Denver County, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Summit County, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Bergen County, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Harris County, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"San Francisco County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Contra Costa County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Orange County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Norfolk County, MA",0,,0,0,2020-03-14 00:00:00,US
+,,"Maricopa County, AZ",0,,0,0,2020-03-14 00:00:00,US
+,,"Wake County, NC",0,,0,0,2020-03-14 00:00:00,US
+,,"Westchester County, NY",0,,0,0,2020-03-14 00:00:00,US
+,,"Grafton County, NH",0,,0,0,2020-03-14 00:00:00,US
+,,"Hillsborough, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Placer County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"San Mateo, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Sonoma County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Umatilla, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Fulton County, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Washington County, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Snohomish County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Humboldt County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Sacramento County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"San Diego County, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"San Benito, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Los Angeles, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"King County, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Cook County, IL",0,,0,0,2020-03-14 00:00:00,US
+,,"Skagit, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Thurston, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Island, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Whatcom, WA",0,,0,0,2020-03-14 00:00:00,US
+,,"Marin, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Calaveras, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Stanislaus, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"San Joaquin, CA",0,,0,0,2020-03-14 00:00:00,US
+,,"Essex, MA",0,,0,0,2020-03-14 00:00:00,US
+,,"Charlton, GA",0,,0,0,2020-03-14 00:00:00,US
+,,"Collier, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Pinellas, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Alachua, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Nassau, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Pasco, FL",0,,0,0,2020-03-14 00:00:00,US
+,,"Dallas, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"Tarrant, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"Montgomery, TX",0,,0,0,2020-03-14 00:00:00,US
+,,"Middlesex, NJ",0,,0,0,2020-03-14 00:00:00,US
+,,"Jefferson, CO",0,,0,0,2020-03-14 00:00:00,US
+,,"Multnomah, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Polk, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"Deschutes, OR",0,,0,0,2020-03-14 00:00:00,US
+,,"McHenry, IL",0,,0,0,2020-03-14 00:00:00,US
+,,"Lake, IL",0,,0,0,2020-03-14 00:00:00,US
+,,"Bucks, PA",0,,0,0,2020-03-14 00:00:00,US
+,,"Hanover, VA",0,,0,0,2020-03-14 00:00:00,US
+,,"Lancaster, SC",0,,0,0,2020-03-14 00:00:00,US
+,,"Sullivan, TN",0,,0,0,2020-03-14 00:00:00,US
+,,"Johnson, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Howard, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"St. Joseph, IN",0,,0,0,2020-03-14 00:00:00,US
+,,"Knox, NE",0,,0,0,2020-03-14 00:00:00,US
+,,"Stark, OH",0,,0,0,2020-03-14 00:00:00,US
+,,"Anoka, MN",0,,0,0,2020-03-14 00:00:00,US
+,,"Olmsted, MN",0,,0,0,2020-03-14 00:00:00,US
+,,"Summit, UT",0,,0,0,2020-03-14 00:00:00,US
+,,"Fairfield, CT",0,,0,0,2020-03-14 00:00:00,US
+,,"Litchfield, CT",0,,0,0,2020-03-14 00:00:00,US
+,,"Orleans, LA",0,,0,0,2020-03-14 00:00:00,US
+,,"Pennington, SD",0,,0,0,2020-03-14 00:00:00,US
+,,"Beadle, SD",0,,0,0,2020-03-14 00:00:00,US
+,,"Charles Mix, SD",0,,0,0,2020-03-14 00:00:00,US
+,,"Davison, SD",0,,0,0,2020-03-14 00:00:00,US
+,,"Minnehaha, SD",0,,0,0,2020-03-14 00:00:00,US
+,,"Bon Homme, SD",0,,0,0,2020-03-14 00:00:00,US
+,,"Socorro, NM",0,,0,0,2020-03-14 00:00:00,US
+,,"Bernalillo, NM",0,,0,0,2020-03-14 00:00:00,US
+,,"Oakland, MI",0,,0,0,2020-03-14 00:00:00,US
+,,"Wayne, MI",0,,0,0,2020-03-14 00:00:00,US
+,,"New Castle, DE",0,,0,0,2020-03-14 00:00:00,US
+,,Cuba,4,,0,0,2020-03-14 00:00:00,Cuba
+,,Guyana,1,,0,1,2020-03-14 00:00:00,Guyana
+,,Australian Capital Territory,1,,0,0,2020-03-14 00:00:00,Australia
+,,United Kingdom,1140,,18,21,2020-03-14 00:00:00,United Kingdom
+,,Kazakhstan,6,,0,0,2020-03-14 00:00:00,Kazakhstan
+,,French Polynesia,3,,0,0,2020-03-14 00:00:00,France
+,,Cayman Islands,1,,0,0,2020-03-14 00:00:00,Cayman Islands
+,,Guadeloupe,1,,0,0,2020-03-14 00:00:00,Guadeloupe
+,,Manitoba,4,,0,0,2020-03-14 00:00:00,Canada
+,,Saskatchewan,2,,0,0,2020-03-14 00:00:00,Canada
+,,Ethiopia,1,,0,0,2020-03-14 00:00:00,Ethiopia
+,,Sudan,1,,0,1,2020-03-14 00:00:00,Sudan
+,,Guinea,1,,0,0,2020-03-14 00:00:00,Guinea
+,,Aruba,2,,0,0,2020-03-14 00:00:00,Aruba
+,,Grand Princess,2,,0,0,2020-03-14 00:00:00,Canada
+,,Kenya,1,,0,0,2020-03-14 00:00:00,Kenya
+,,Antigua and Barbuda,1,,0,0,2020-03-14 00:00:00,Antigua and Barbuda
+,,Alabama,6,,0,0,2020-03-14 00:00:00,US
+,,Fench Guiana,5,,0,0,2020-03-14 00:00:00,France
+,,Uruguay,4,,0,0,2020-03-14 00:00:00,Uruguay
+,,Ghana,3,,0,0,2020-03-14 00:00:00,Ghana
+,,Puerto Rico,3,,0,0,2020-03-14 00:00:00,US
+,,Jersey,2,,0,0,2020-03-14 00:00:00,Jersey
+,,Namibia,2,,0,0,2020-03-14 00:00:00,Namibia
+,,Seychelles,2,,0,0,2020-03-14 00:00:00,Seychelles
+,,Trinidad and Tobago,2,,0,0,2020-03-14 00:00:00,Trinidad and Tobago
+,,Venezuela,2,,0,0,2020-03-14 00:00:00,Venezuela
+,,Curacao,1,,0,0,2020-03-14 00:00:00,Curacao
+,,Eswatini,1,,0,0,2020-03-14 00:00:00,Eswatini
+,,Gabon,1,,0,0,2020-03-14 00:00:00,Gabon
+,,Guatemala,1,,0,0,2020-03-14 00:00:00,Guatemala
+,,Guernsey,1,,0,0,2020-03-14 00:00:00,Guernsey
+,,Mauritania,1,,0,0,2020-03-14 00:00:00,Mauritania
+,,Rwanda,1,,0,0,2020-03-14 00:00:00,Rwanda
+,,Saint Lucia,1,,0,0,2020-03-14 00:00:00,Saint Lucia
+,,Saint Vincent and the Grenadines,1,,0,0,2020-03-14 00:00:00,Saint Vincent and the Grenadines
+,,Suriname,1,,0,0,2020-03-14 00:00:00,Suriname
+,,"Virgin Islands, U.S.",1,,0,0,2020-03-14 00:00:00,US
+,,occupied Palestinian territory,0,,0,0,2020-03-14 00:00:00,occupied Palestinian territory

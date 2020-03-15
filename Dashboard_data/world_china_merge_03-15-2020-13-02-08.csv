@@ -1,0 +1,147 @@
+﻿province,locationName,locationEnglishName,confirmedCount,suspectedCount,curedCount,deadCount,updateTime,Country/Region
+Gansu,甘肃省,Gansu,133.0,0.0,91.0,2.0,2020-03-15 21:41:38.179,China
+Guangdong,广东省,Guangdong,1360.0,0.0,1304.0,8.0,2020-03-15 21:24:35.118,China
+Hubei,湖北省,Hubei,67794.0,0.0,54288.0,3085.0,2020-03-15 18:07:03.272,China
+Guangdong,广东省,Guangdong,1358.0,0.0,1304.0,8.0,2020-03-15 18:07:03.272,China
+Sichuan,四川省,Sichuan,539.0,0.0,516.0,3.0,2020-03-15 17:44:10.407,China
+Guangdong,广东省,Guangdong,1357.0,0.0,1304.0,8.0,2020-03-15 17:44:02.533,China
+Tianjin,天津市,Tianjin,136.0,0.0,133.0,3.0,2020-03-15 17:24:28.841,China
+Liaoning,辽宁省,Liaoning,125.0,0.0,114.0,1.0,2020-03-15 12:08:06.931,China
+Gansu,境外输入人员,,42.0,0.0,2.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,兰州,Lanzhou,36.0,0.0,34.0,2.0,2020-03-15 21:41:38.179,China
+Gansu,天水,Tianshui,12.0,0.0,12.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,平凉,Pingliang,9.0,0.0,9.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,定西,Dingxi,9.0,0.0,9.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,甘南,Gannan,8.0,0.0,8.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,白银,Baiyin,4.0,0.0,4.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,陇南,Longnan,4.0,0.0,4.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,庆阳,Qingyang,3.0,0.0,3.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,临夏,Linxia,3.0,0.0,3.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,张掖,Zhangye,2.0,0.0,2.0,0.0,2020-03-15 21:41:38.179,China
+Gansu,金昌,Jinchang,1.0,0.0,1.0,0.0,2020-03-15 21:41:38.179,China
+Guangdong,深圳,Shenzhen,422.0,0.0,399.0,3.0,2020-03-15 21:24:35.118,China
+Guangdong,广州,Guangzhou,348.0,0.0,330.0,1.0,2020-03-15 21:24:35.118,China
+Guangdong,佛山,Foshan,85.0,0.0,81.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,中山,Zhongshan,68.0,0.0,64.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,东莞,Dongguan,100.0,0.0,97.0,1.0,2020-03-15 21:24:35.118,China
+Guangdong,汕头,Shantou,25.0,0.0,24.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,珠海,Zhuhai,98.0,0.0,97.0,1.0,2020-03-15 21:24:35.118,China
+Guangdong,惠州,Huizhou,62.0,0.0,62.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,江门,Jiangmen,23.0,0.0,23.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,湛江,Zhanjiang,22.0,0.0,22.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,肇庆,Zhaoqing,19.0,0.0,18.0,1.0,2020-03-15 21:24:35.118,China
+Guangdong,梅州,Meizhou,16.0,0.0,16.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,阳江,Yangjiang,14.0,0.0,14.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,茂名,Maoming,14.0,0.0,14.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,清远,Qingyuan,12.0,0.0,12.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,韶关,Shaoguan,10.0,0.0,9.0,1.0,2020-03-15 21:24:35.118,China
+Guangdong,揭阳,Jieyang,8.0,0.0,8.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,汕尾,Shanwei,5.0,0.0,5.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,潮州,Chaozhou,5.0,0.0,5.0,0.0,2020-03-15 21:24:35.118,China
+Guangdong,河源,Heyuan,4.0,0.0,4.0,0.0,2020-03-15 21:24:35.118,China
+Hubei,武汉,Wuhan,49999.0,0.0,37642.0,2456.0,2020-03-15 18:07:03.272,China
+Hubei,孝感,Xiaogan,3518.0,0.0,3253.0,126.0,2020-03-15 18:07:03.272,China
+Hubei,鄂州,Ezhou,1394.0,0.0,1272.0,57.0,2020-03-15 18:07:03.272,China
+Hubei,随州,Suizhou,1307.0,0.0,1213.0,45.0,2020-03-15 18:07:03.272,China
+Hubei,荆州,Jingzhou,1580.0,0.0,1483.0,50.0,2020-03-15 18:07:03.272,China
+Hubei,黄冈,Huanggang,2907.0,0.0,2738.0,125.0,2020-03-15 18:07:03.272,China
+Hubei,十堰,Shiyan,672.0,0.0,630.0,8.0,2020-03-15 18:07:03.272,China
+Hubei,宜昌,Yichang,931.0,0.0,864.0,36.0,2020-03-15 18:07:03.272,China
+Hubei,黄石,Huangshi,1015.0,0.0,948.0,38.0,2020-03-15 18:07:03.272,China
+Hubei,仙桃,Xiantao,575.0,0.0,526.0,22.0,2020-03-15 18:07:03.272,China
+Hubei,荆门,Jingmen,928.0,0.0,864.0,39.0,2020-03-15 18:07:03.272,China
+Hubei,襄阳,Xiangyang,1175.0,0.0,1125.0,38.0,2020-03-15 18:07:03.272,China
+Hubei,潜江,Qianjiang,198.0,0.0,182.0,9.0,2020-03-15 18:07:03.272,China
+Hubei,天门,Tianmen,496.0,0.0,477.0,15.0,2020-03-15 18:07:03.272,China
+Hubei,恩施州,Enshi Tujia and Miao Autonomous Prefecture,252.0,0.0,241.0,7.0,2020-03-15 18:07:03.272,China
+Hubei,咸宁,Xianning,836.0,0.0,819.0,14.0,2020-03-15 18:07:03.272,China
+Hubei,神农架林区,Shennongjia,11.0,0.0,11.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,深圳,Shenzhen,421.0,0.0,399.0,3.0,2020-03-15 18:07:03.272,China
+Guangdong,广州,Guangzhou,348.0,0.0,330.0,1.0,2020-03-15 18:07:03.272,China
+Guangdong,中山,Zhongshan,68.0,0.0,64.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,佛山,Foshan,84.0,0.0,81.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,东莞,Dongguan,100.0,0.0,97.0,1.0,2020-03-15 18:07:03.272,China
+Guangdong,汕头,Shantou,25.0,0.0,24.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,珠海,Zhuhai,98.0,0.0,97.0,1.0,2020-03-15 18:07:03.272,China
+Guangdong,惠州,Huizhou,62.0,0.0,62.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,江门,Jiangmen,23.0,0.0,23.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,湛江,Zhanjiang,22.0,0.0,22.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,肇庆,Zhaoqing,19.0,0.0,18.0,1.0,2020-03-15 18:07:03.272,China
+Guangdong,梅州,Meizhou,16.0,0.0,16.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,阳江,Yangjiang,14.0,0.0,14.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,茂名,Maoming,14.0,0.0,14.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,清远,Qingyuan,12.0,0.0,12.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,韶关,Shaoguan,10.0,0.0,9.0,1.0,2020-03-15 18:07:03.272,China
+Guangdong,揭阳,Jieyang,8.0,0.0,8.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,汕尾,Shanwei,5.0,0.0,5.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,潮州,Chaozhou,5.0,0.0,5.0,0.0,2020-03-15 18:07:03.272,China
+Guangdong,河源,Heyuan,4.0,0.0,4.0,0.0,2020-03-15 18:07:03.272,China
+Sichuan,成都,Chengdu,144.0,0.0,122.0,3.0,2020-03-15 17:44:10.407,China
+Sichuan,甘孜州,Garzê Tibetan Autonomous Prefecture,78.0,0.0,77.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,达州,Dazhou,42.0,0.0,42.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,南充,Nanchong,39.0,0.0,39.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,广安,Guang'an,30.0,0.0,30.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,泸州,Luzhou,24.0,0.0,24.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,巴中,Bazhong,24.0,0.0,24.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,绵阳,Mianyang,22.0,0.0,22.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,内江,Neijiang,22.0,0.0,22.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,德阳,Deyang,18.0,0.0,18.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,遂宁,Suining,17.0,0.0,17.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,攀枝花,Panzhihua,16.0,0.0,16.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,凉山州,Liangshan Yi Autonomous Prefecture,13.0,0.0,13.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,宜宾,Yibin,12.0,0.0,12.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,自贡,Zigong,9.0,0.0,9.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,眉山,Meishan,8.0,0.0,8.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,雅安,Ya'an,7.0,0.0,7.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,广元,Guangyuan,6.0,0.0,6.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,资阳,Ziyang,4.0,0.0,4.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,乐山,Leshan,3.0,0.0,3.0,0.0,2020-03-15 17:44:10.407,China
+Sichuan,阿坝州,Ngawa Tibetan and Qiang Autonomous Prefecture,1.0,0.0,1.0,0.0,2020-03-15 17:44:10.407,China
+Guangdong,深圳,Shenzhen,421.0,0.0,399.0,3.0,2020-03-15 17:44:02.533,China
+Guangdong,广州,Guangzhou,347.0,0.0,330.0,1.0,2020-03-15 17:44:02.533,China
+Guangdong,中山,Zhongshan,68.0,0.0,64.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,佛山,Foshan,84.0,0.0,81.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,东莞,Dongguan,100.0,0.0,97.0,1.0,2020-03-15 17:44:02.533,China
+Guangdong,汕头,Shantou,25.0,0.0,24.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,珠海,Zhuhai,98.0,0.0,97.0,1.0,2020-03-15 17:44:02.533,China
+Guangdong,惠州,Huizhou,62.0,0.0,62.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,江门,Jiangmen,23.0,0.0,23.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,湛江,Zhanjiang,22.0,0.0,22.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,肇庆,Zhaoqing,19.0,0.0,18.0,1.0,2020-03-15 17:44:02.533,China
+Guangdong,梅州,Meizhou,16.0,0.0,16.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,阳江,Yangjiang,14.0,0.0,14.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,茂名,Maoming,14.0,0.0,14.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,清远,Qingyuan,12.0,0.0,12.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,韶关,Shaoguan,10.0,0.0,9.0,1.0,2020-03-15 17:44:02.533,China
+Guangdong,揭阳,Jieyang,8.0,0.0,8.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,汕尾,Shanwei,5.0,0.0,5.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,潮州,Chaozhou,5.0,0.0,5.0,0.0,2020-03-15 17:44:02.533,China
+Guangdong,河源,Heyuan,4.0,0.0,4.0,0.0,2020-03-15 17:44:02.533,China
+Tianjin,宝坻区,Baodi District,60.0,0.0,58.0,2.0,2020-03-15 17:24:28.841,China
+Tianjin,河东区,Hedong District,15.0,0.0,14.0,1.0,2020-03-15 17:24:28.841,China
+Tianjin,河北区,Hebei District,12.0,0.0,12.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,北辰区,Beichen District,6.0,0.0,6.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,南开区,Nankai District,6.0,0.0,6.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,和平区,Heping District,6.0,0.0,6.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,外地来津人员,People from other cities,6.0,0.0,6.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,东丽区,Dongli District,4.0,0.0,4.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,宁河区,Ninghe District,4.0,0.0,4.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,河西区,Hexi District,4.0,0.0,4.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,西青区,Xiqing District,4.0,0.0,4.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,滨海新区,Binhai New Area,3.0,0.0,3.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,武清区,Wuqing District,2.0,0.0,2.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,红桥区,Hongqiao District,2.0,0.0,2.0,0.0,2020-03-15 17:24:28.841,China
+Tianjin,津南区,Jinnan District,2.0,0.0,2.0,0.0,2020-03-15 17:24:28.841,China
+Liaoning,丹东,Dandong,11.0,0.0,7.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,沈阳,Shenyang,28.0,0.0,26.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,葫芦岛,Huludao,12.0,0.0,9.0,1.0,2020-03-15 12:08:06.931,China
+Liaoning,大连,Dalian,19.0,0.0,18.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,朝阳,Chaoyang,6.0,0.0,5.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,锦州,Jinzhou,12.0,0.0,12.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,盘锦,Panjin,11.0,0.0,11.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,阜新,Fuxin,8.0,0.0,8.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,铁岭,Tieling,7.0,0.0,7.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,鞍山,Anshan,4.0,0.0,4.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,本溪,Benxi,3.0,0.0,3.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,辽阳,Liaoyang,3.0,0.0,3.0,0.0,2020-03-15 12:08:06.931,China
+Liaoning,营口,Yingkou,1.0,0.0,1.0,0.0,2020-03-15 12:08:06.931,China
