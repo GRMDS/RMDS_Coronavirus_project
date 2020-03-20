@@ -1,0 +1,261 @@
+country,region,confirmed_infected,dead,timestamp
+Spain,Andalucía,13,,2020-03-04
+Spain,Aragón,0,,2020-03-04
+Spain,Asturias,2,,2020-03-04
+Spain,Baleares,5,,2020-03-04
+Spain,Canarias,7,,2020-03-04
+Spain,Cantabria,10,,2020-03-04
+Spain,Castilla La Mancha,12,,2020-03-04
+Spain,Castilla y León,11,,2020-03-04
+Spain,Cataluña,15,,2020-03-04
+Spain,Ceuta,0,,2020-03-04
+Spain,C. Valenciana,19,1,2020-03-04
+Spain,Extremadura,6,,2020-03-04
+Spain,Galicia,1,,2020-03-04
+Spain,Madrid,70,,2020-03-04
+Spain,Melilla,0,,2020-03-04
+Spain,Murcia,0,,2020-03-04
+Spain,Navarra,3,,2020-03-04
+Spain,País Vasco,17,,2020-03-04
+Spain,La Rioja,7,,2020-03-04
+Spain,Total,198,1,2020-03-04
+Spain,Andalucía,12,0,2020-03-05
+Spain,Aragón,1,0,2020-03-05
+Spain,Asturias,5,0,2020-03-05
+Spain,Baleares,6,0,2020-03-05
+Spain,Canarias,8,0,2020-03-05
+Spain,Cantabria,10,0,2020-03-05
+Spain,Castilla La Mancha,13,0,2020-03-05
+Spain,Castilla y León,11,0,2020-03-05
+Spain,Cataluña,24,0,2020-03-05
+Spain,Ceuta,0,0,2020-03-05
+Spain,C. Valenciana,19,1,2020-03-05
+Spain,Extremadura,6,0,2020-03-05
+Spain,Galicia,1,0,2020-03-05
+Spain,Madrid,90,1,2020-03-05
+Spain,Melilla,0,0,2020-03-05
+Spain,Murcia,0,0,2020-03-05
+Spain,Navarra,3,0,2020-03-05
+Spain,País Vasco,17,1,2020-03-05
+Spain,La Rioja,11,0,2020-03-05
+Spain,Total,237,3,2020-03-05
+Spain,Andalucía,21,0,2020-03-06
+Spain,Aragón,6,1,2020-03-06
+Spain,Asturias,5,0,2020-03-06
+Spain,Baleares,6,0,2020-03-06
+Spain,Canarias,11,0,2020-03-06
+Spain,Cantabria,10,0,2020-03-06
+Spain,Castilla La Mancha,15,0,2020-03-06
+Spain,Castilla y León,14,0,2020-03-06
+Spain,Cataluña,24,0,2020-03-06
+Spain,Ceuta,0,0,2020-03-06
+Spain,C. Valenciana,30,1,2020-03-06
+Spain,Extremadura,6,0,2020-03-06
+Spain,Galicia,3,0,2020-03-06
+Spain,Madrid,137,2,2020-03-06
+Spain,Melilla,0,0,2020-03-06
+Spain,Murcia,0,0,2020-03-06
+Spain,Navarra,3,0,2020-03-06
+Spain,País Vasco,45,1,2020-03-06
+Spain,La Rioja,29,0,2020-03-06
+Spain,Total,365,5,2020-03-06
+Spain,Andalucía,54,0,2020-03-09
+Spain,Aragón,13,1,2020-03-09
+Spain,Asturias,7,0,2020-03-09
+Spain,Baleares,11,0,2020-03-09
+Spain,Canarias,22,0,2020-03-09
+Spain,Cantabria,12,0,2020-03-09
+Spain,Castilla La Mancha,26,0,2020-03-09
+Spain,Castilla y León,23,0,2020-03-09
+Spain,Cataluña,75,1,2020-03-09
+Spain,Ceuta,0,0,2020-03-09
+Spain,C. Valenciana,37,1,2020-03-09
+Spain,Extremadura,7,0,2020-03-09
+Spain,Galicia,6,0,2020-03-09
+Spain,Madrid,469,8,2020-03-09
+Spain,Melilla,0,0,2020-03-09
+Spain,Murcia,4,0,2020-03-09
+Spain,Navarra,3,0,2020-03-09
+Spain,País Vasco,149,5,2020-03-09
+Spain,La Rioja,81,0,2020-03-09
+Spain,Total,999,16,2020-03-09
+Spain,Andalucía,71,0,2020-03-10
+Spain,Aragón,38,3,2020-03-10
+Spain,Asturias,22,0,2020-03-10
+Spain,Baleares,13,0,2020-03-10
+Spain,Canarias,25,0,2020-03-10
+Spain,Cantabria,12,0,2020-03-10
+Spain,Castilla La Mancha,39,0,2020-03-10
+Spain,Castilla y León,56,0,2020-03-10
+Spain,Cataluña,124,3,2020-03-10
+Spain,Ceuta,0,0,2020-03-10
+Spain,C. Valenciana,50,1,2020-03-10
+Spain,Extremadura,8,0,2020-03-10
+Spain,Galicia,22,0,2020-03-10
+Spain,Madrid,782,21,2020-03-10
+Spain,Melilla,0,0,2020-03-10
+Spain,Murcia,9,0,2020-03-10
+Spain,Navarra,12,0,2020-03-10
+Spain,País Vasco,195,6,2020-03-10
+Spain,La Rioja,144,1,2020-03-10
+Spain,Total,1.622,35,2020-03-10
+Spain,Andalucía,90,0,2020-03-11
+Spain,Aragón,45,4,2020-03-11
+Spain,Asturias,32,0,2020-03-11
+Spain,Baleares,16,0,2020-03-11
+Spain,Canarias,37,0,2020-03-11
+Spain,Cantabria,12,0,2020-03-11
+Spain,Castilla-La Mancha,71,0,2020-03-11
+Spain,Castilla y León,71,0,2020-03-11
+Spain,Cataluña,156,3,2020-03-11
+Spain,Ceuta,0,0,2020-03-11
+Spain,C. Valenciana,65,1,2020-03-11
+Spain,Extremadura,9,0,2020-03-11
+Spain,Galicia,39,0,2020-03-11
+Spain,Madrid,1024,31,2020-03-11
+Spain,Melilla,0,0,2020-03-11
+Spain,Murcia,11,0,2020-03-11
+Spain,Navarra,46,0,2020-03-11
+Spain,País Vasco,225,6,2020-03-11
+Spain,La Rioja,179,2,2020-03-11
+Spain,Total,2128,47,2020-03-11
+Spain,Andalucía,115,0,2020-03-12
+Spain,Aragón,64,6,2020-03-12
+Spain,Asturias,47,1,2020-03-12
+Spain,Baleares,22,1,2020-03-12
+Spain,Canarias,51,0,2020-03-12
+Spain,Cantabria,16,0,2020-03-12
+Spain,Castilla-La Mancha,115,1,2020-03-12
+Spain,Castilla y León,92,0,2020-03-12
+Spain,Cataluña,260,4,2020-03-12
+Spain,Ceuta,0,0,2020-03-12
+Spain,C. Valenciana,76,1,2020-03-12
+Spain,Extremadura,19,1,2020-03-12
+Spain,Galicia,35,0,2020-03-12
+Spain,Madrid,1388,56,2020-03-12
+Spain,Melilla,0,0,2020-03-12
+Spain,Murcia,26,0,2020-03-12
+Spain,Navarra,73,0,2020-03-12
+Spain,País Vasco,346,11,2020-03-12
+Spain,La Rioja,205,2,2020-03-12
+Spain,Total,2.95,84,2020-03-12
+Spain,Andalucía,219,0,2020-03-13
+Spain,Aragón,80,7,2020-03-13
+Spain,Asturias,67,1,2020-03-13
+Spain,Baleares,30,1,2020-03-13
+Spain,Canarias,70,0,2020-03-13
+Spain,Cantabria,29,0,2020-03-13
+Spain,Castilla-La Mancha,194,5,2020-03-13
+Spain,Castilla y León,169,1,2020-03-13
+Spain,Cataluña,316,4,2020-03-13
+Spain,Ceuta,0,0,2020-03-13
+Spain,C. Valenciana,94,1,2020-03-13
+Spain,Extremadura,39,1,2020-03-13
+Spain,Galicia,85,0,2020-03-13
+Spain,Madrid,1990,81,2020-03-13
+Spain,Melilla,2,0,2020-03-13
+Spain,Murcia,35,0,2020-03-13
+Spain,Navarra,130,0,2020-03-13
+Spain,País Vasco,417,14,2020-03-13
+Spain,La Rioja,243,2,2020-03-13
+Spain,Total,4.209,120,2020-03-13
+Spain,Andalucía,554,7,2020-03-16
+Spain,Aragón,174,11,2020-03-16
+Spain,Asturias,177,1,2020-03-16
+Spain,Baleares,73,1,2020-03-16
+Spain,Canarias,119,1,2020-03-16
+Spain,Cantabria,58,0,2020-03-16
+Spain,Castilla-La Mancha,567,17,2020-03-16
+Spain,Castilla y León,334,9,2020-03-16
+Spain,Cataluña,903,12,2020-03-16
+Spain,Ceuta,1,0,2020-03-16
+Spain,C. Valenciana,409,5,2020-03-16
+Spain,Extremadura,111,2,2020-03-16
+Spain,Galicia,245,2,2020-03-16
+Spain,Madrid,4.165,213,2020-03-16
+Spain,Melilla,8,0,2020-03-16
+Spain,Murcia,77,0,2020-03-16
+Spain,Navarra,274,1,2020-03-16
+Spain,País Vasco,630,23,2020-03-16
+Spain,La Rioja,312,4,2020-03-16
+Spain,Total,9.191,309,2020-03-16
+Spain,Andalucía,683,11,2020-03-17
+Spain,Aragón,207,12,2020-03-17
+Spain,Asturias,193,1,2020-03-17
+Spain,Baleares,92,1,2020-03-17
+Spain,Canarias,148,2,2020-03-17
+Spain,Cantabria,58,0,2020-03-17
+Spain,Castilla-La Mancha,567,17,2020-03-17
+Spain,Castilla y León,431,12,2020-03-17
+Spain,Cataluña,1.394,18,2020-03-17
+Spain,Ceuta,1,0,2020-03-17
+Spain,C. Valenciana,541,13,2020-03-17
+Spain,Extremadura,153,3,2020-03-17
+Spain,Galicia,292,3,2020-03-17
+Spain,Madrid,4.871,355,2020-03-17
+Spain,Melilla,17,0,2020-03-17
+Spain,Murcia,97,0,2020-03-17
+Spain,Navarra,313,2,2020-03-17
+Spain,País Vasco,765,36,2020-03-17
+Spain,La Rioja,355,5,2020-03-17
+Spain,Total,11.178,491,2020-03-17
+Spain,Andalucía,859,19,2020-03-18
+Spain,Aragón,226,13,2020-03-18
+Spain,Asturias,242,1,2020-03-18
+Spain,Baleares,112,1,2020-03-18
+Spain,Canarias,181,3,2020-03-18
+Spain,Cantabria,68,1,2020-03-18
+Spain,Castilla-La Mancha,675,28,2020-03-18
+Spain,Castilla y León,668,22,2020-03-18
+Spain,Cataluña,1.866,41,2020-03-18
+Spain,Ceuta,1,0,2020-03-18
+Spain,C. Valenciana,726,22,2020-03-18
+Spain,Extremadura,194,6,2020-03-18
+Spain,Galicia,341,3,2020-03-18
+Spain,Madrid,5637,390,2020-03-18
+Spain,Melilla,20,0,2020-03-18
+Spain,Murcia,122,0,2020-03-18
+Spain,Navarra,386,3,2020-03-18
+Spain,País Vasco,973,40,2020-03-18
+Spain,La Rioja,419,5,2020-03-18
+Spain,Total,13.716,598,2020-03-18
+Spain,Andalucía,1.008,23,2020-03-19
+Spain,Aragón,281,15,2020-03-19
+Spain,Asturias,292,1,2020-03-19
+Spain,Baleares,169,2,2020-03-19
+Spain,Canarias,220,3,2020-03-19
+Spain,Cantabria,83,1,2020-03-19
+Spain,Castilla-La Mancha,801,42,2020-03-19
+Spain,Castilla y León,868,29,2020-03-19
+Spain,Cataluña,2.702,55,2020-03-19
+Spain,Ceuta,1,0,2020-03-19
+Spain,C. Valenciana,921,24,2020-03-19
+Spain,Extremadura,241,8,2020-03-19
+Spain,Galicia,453,4,2020-03-19
+Spain,Madrid,6.777,498,2020-03-19
+Spain,Melilla,23,0,2020-03-19
+Spain,Murcia,167,0,2020-03-19
+Spain,Navarra,482,4,2020-03-19
+Spain,País Vasco,1.19,53,2020-03-19
+Spain,La Rioja,468,5,2020-03-19
+Spain,Total,17.147,767,2020-03-19
+Spain,Andalucía,1.008,23,2020-03-19
+Spain,Aragón,281,15,2020-03-19
+Spain,Asturias,292,1,2020-03-19
+Spain,Baleares,169,2,2020-03-19
+Spain,Canarias,220,3,2020-03-19
+Spain,Cantabria,83,1,2020-03-19
+Spain,Castilla-La Mancha,801,42,2020-03-19
+Spain,Castilla y León,868,29,2020-03-19
+Spain,Cataluña,2.702,55,2020-03-19
+Spain,Ceuta,1,0,2020-03-19
+Spain,C. Valenciana,921,24,2020-03-19
+Spain,Extremadura,241,8,2020-03-19
+Spain,Galicia,453,4,2020-03-19
+Spain,Madrid,6.777,498,2020-03-19
+Spain,Melilla,23,0,2020-03-19
+Spain,Murcia,167,0,2020-03-19
+Spain,Navarra,482,4,2020-03-19
+Spain,País Vasco,1.19,53,2020-03-19
+Spain,La Rioja,468,5,2020-03-19
+Spain,Total,17.147,767,2020-03-19
