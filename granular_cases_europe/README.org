@@ -1,0 +1,21 @@
+* Explanation
+
+This folders contains csv files with different details (according to the
+sources) about cases of infection in different countries, to a geographical
+level more detailed than just country, as well as the code written in
+Python 3 to extract and update the data.
+
+* About the code
+
+** =first_scraping.py=
+
+Code used for the creation of the first csv.
+
+** Files per country
+
+Each country has its own =country_update.py= file which contains the code
+to update the =country.csv= file directly, via =country_update()= function.
+
+* CONTACT
+
+For questions or details contact *teoten@gmail.com*
