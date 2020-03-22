@@ -4,9 +4,11 @@
 ## to create the csv files for the following countries:
 ##    - Spain
 ##    - Italy
+##    - France 
 
 ## Libraries
 from selenium import webdriver
+from bs4 import BeautifulSoup
 import pandas as pd
 import re
 import tabula
@@ -15,6 +17,7 @@ import PyPDF2
 import io
 import requests
 from datetime import datetime
+from time import sleep
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -96,7 +99,7 @@ list(spain_over_time.columns)
 
 spain = pd.DataFrame({"country":"Spain", "region":spain_over_time["CCAA"], "confirmed_infected":spain_over_time["Total casos"], "dead":spain_over_time["Fallecidos"], "timestamp": spain_over_time["Timestamp"]}) 
 
-#spain.to_csv("Spain_first.csv", index = False)
+#spain.to_csv("./granular_cases_europe/Spain_first.csv", index = False)
 
 ###   FRANCE   #############################################
 ############################################################
@@ -110,7 +113,7 @@ dat_raw['granularite']
 
 france = pd.DataFrame({"country":"France", "granularity":dat_raw["granularite"], "name":dat_raw["maille_nom"], "confirmed_infected": dat_raw["cas_confirmes"], "dead": dat_raw["deces"], "recovered": dat_raw["reanimation"], "timestamp": dat_raw["date"]})
 
-#france.to_csv("France_first.csv", index = False)
+#france.to_csv("./granular_cases_europe/France_first.csv", index = False)
 
 ## Details
 ## Granularity has several variables, in the order
@@ -118,3 +121,77 @@ france = pd.DataFrame({"country":"France", "granularity":dat_raw["granularite"],
 ## Country = "pays"
 ## "departement" and "region": France is divided into 18 regions
 ##                            (13 metropolitan) and 101 departments 
+
+###   ITALY   ##############################################
+############################################################
+## Good data is stored in the website:
+## https://statistichecoronavirus.it/coronavirus-italia/
+## You can choose region in the map or simply add at the end
+## https://statistichecoronavirus.it/coronavirus-italia/puglia/
+## or choose it from the list in the following link
+## https://statistichecoronavirus.it/regioni-coronavirus-italia/
+## The last one contains more details per region 
+
+## Getting general data per region 
+source_url = "https://statistichecoronavirus.it/regioni-coronavirus-italia/"
+driver = webdriver.Firefox(executable_path="./granular_cases_europe/geckodriver")
+driver.get(source_url)
+content = driver.page_source 
+soup = BeautifulSoup(content, "lxml")
+driver.quit()
+
+## Extract the table 
+table = soup.find('tbody')
+links = []
+region = []
+population = []
+for tr in table.find_all("tr"):
+    get_url = re.search("(?P<url>https?://[^\s]+)", str(tr)).group()
+    get_url = re.sub('[^A-Za-z0-9/\-\:\.]+', '', get_url)
+    links.append(get_url)
+    raw = [i.text for i in tr.find_all("td")]
+    reg = raw[0]
+    pop = raw[1]
+    region.append(reg)
+    population.append(pop)
+
+#on each tr, find td, where data is contained
+regioni = pd.DataFrame({"Region":region, "Population":population, "Data_site":links})
+## Save regioni, with general info about the regions
+#regioni.to_csv('./granular_cases_europe/Italy_regions.csv', index = False)
+
+## Extract data per region 
+regioni = pd.read_csv('./granular_cases_europe/Italy_regions.csv')
+
+italy_all = pd.DataFrame()
+#for i in range(len(regioni.Region)):
+for i in range(16, len(regioni.Region), 1):
+    URL = regioni.Data_site[i]
+    driver = webdriver.Firefox(executable_path="./granular_cases_europe/geckodriver")
+    driver.get(URL)
+    print('Opening '+regioni.Data_site[i])
+    sleep(20)
+    content = driver.page_source 
+    soup = BeautifulSoup(content, "lxml")
+    driver.quit()
+    table = soup.find_all("table")
+    rows = []
+    if len(table) > 1:
+        for t in table[1].find_all('tr'):
+            rows.append(t.text)
+    else:
+        print("Table not found for "+regioni.Region[i])
+        continue
+    rows[0] = "\n"+rows[0]
+    rows = [x.replace("\n", "", 1) for x in rows]
+    it_data = pd.DataFrame(rows)
+    it_data = it_data[0].str.split('\n', 4, expand=True)
+    it_data.columns = it_data.iloc[0]
+    it_data = it_data.drop([0,1]).reset_index(drop = True)
+    it_data["Region"] = regioni.Region[i]
+    italy_all = italy_all.append(it_data, ignore_index = True)
+    print("Data extraction succesful")
+
+
+italy_all.to_csv('./granular_cases_europe/Italy_first.csv', index = False)
+## Continue from here (Load the file and clean it)

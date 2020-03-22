@@ -75,7 +75,6 @@ the previous one, leaving it ready to append
     for dframe in tables:
         df = dframe.dropna(how = 'all')
         for col in df:
-            print(col)
             if type(df[col][0]) == str:
                 for element in df[col]:
                     if type(element) != float:
