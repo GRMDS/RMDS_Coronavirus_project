@@ -14,5 +14,5 @@ https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.
         print("No updates found")
     else:
         data_fr = data_imported.combine_first(data_fr)
-        data_fr.to_csv("France.csv", index = False)
+        data_fr.to_csv("./granular_cases_europe/France.csv", index = False)
         return(data_fr)

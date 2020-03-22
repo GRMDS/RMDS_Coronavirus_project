@@ -1,6 +1,6 @@
 ## Global variables
 import pandas as pd
-data_sp = pd.read_csv("Spain.csv")
+data_sp = pd.read_csv("./granular_cases_europe/Spain.csv")
 
 ## Functions
 def last_update_text():
@@ -14,7 +14,7 @@ so we decided to use the report number (Actualizacion no#)
     from time import sleep
     import re
     source_url = "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm"
-    driver = webdriver.Firefox(executable_path="./geckodriver")
+    driver = webdriver.Firefox(executable_path="./granular_cases_europe/geckodriver")
     driver.get(source_url)
     sleep(20)
     content = driver.page_source 
@@ -47,7 +47,9 @@ def sp_last_update():
 def sp_compare_update():
     """
 Compares if the last update is already in our data base.
-Retrusn True when it is, and False when it is not.
+
+    True = Our data base is up to date
+    False = We need to get the latest data 
     """
     import pandas as pd
     date = sp_last_update()
@@ -87,8 +89,11 @@ the previous one, leaving it ready to append
         print("Table not found")
         sys.exit(1)
     target['Timestamp'] = sp_last_update()
-    updated_df = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["Total casos"], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})
-    return(updated_df)
+    #return(updated_df)
+    return(target)
+
+target = sp_get_new()
+updated_data = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["Total casos"], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})
 
 def spain_update():
     """
@@ -97,11 +102,31 @@ the official website:
 
 https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm
     """
+    global updated_data
+    try:
+        updated_data
+    except NameError:
+        print("Problem in table format.\n Run sp_get_new() and check the data from there, or check the source directly")
+        sys.exit(1)
     if sp_compare_update() == False:
         global data_sp
-        updated_sp = sp_get_new()
-        data_sp = data_sp.append(updated_sp, ignore_index = True)
-        data_sp.to_csv("Spain.csv", index = False)
+        data_sp = data_sp.append(updated_data, ignore_index = True)
+        data_sp.to_csv("./granular_cases_europe/Spain.csv", index = False)
         return(data_sp)
     else:
         print("No updates found")
+
+## Bug on 22.03.2020
+## <sp_get_new()> got headers as first row
+## PLUS: Names of some headers changed
+## Issue was fixed manually. After few more cases we can asses it better
+## Waiting couple of days.
+##
+#target.loc[0] # contains header (first row)
+#list(target.columns) # current column names
+#
+#target['Timestamp'][0] = 'Timestamp'
+#target.columns = target.iloc[0] # New names 
+#target = target.drop([0,1]).reset_index(drop = True) # remove row 1
+#
+#updated_data = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["TOTAL conf."], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})

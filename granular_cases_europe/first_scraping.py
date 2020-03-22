@@ -165,7 +165,7 @@ regioni = pd.read_csv('./granular_cases_europe/Italy_regions.csv')
 
 italy_all = pd.DataFrame()
 #for i in range(len(regioni.Region)):
-for i in range(16, len(regioni.Region), 1):
+for i in range(len(regioni.Region)):
     URL = regioni.Data_site[i]
     driver = webdriver.Firefox(executable_path="./granular_cases_europe/geckodriver")
     driver.get(URL)
@@ -192,6 +192,16 @@ for i in range(16, len(regioni.Region), 1):
     italy_all = italy_all.append(it_data, ignore_index = True)
     print("Data extraction succesful")
 
+## Last record: 21.03.2020
+italy_all = pd.read_csv('./granular_cases_europe/Italy_first.csv')
 
-italy_all.to_csv('./granular_cases_europe/Italy_first.csv', index = False)
-## Continue from here (Load the file and clean it)
+## Format date 
+day = [re.sub('[^A-Za-z0-9]+', '-', x)+'2020' for x in italy_all.Data]
+[datetime.strptime(x, '%d-%m-%Y') for x in day] # Timestamp for df
+
+for col in italy_all:
+    if type(italy_all[col][0]) == str:
+        italy_all[col] = italy_all[col].str.replace('\((.*)\).*', '')
+
+italy = pd.DataFrame({"country":"Italy", "region":italy_all["Region"], "confirmed_infected": italy_all["Contagi"], "dead": italy_all["Morti"], "recovered": italy_all["Guariti"], "timestamp": day})
+#italy.to_csv('./granular_cases_europe/Italy_first.csv', index = False)
