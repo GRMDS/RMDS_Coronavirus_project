@@ -19,3 +19,9 @@ to update the =country.csv= file directly, via =country_update()= function.
 * CONTACT
 
 For questions or details contact *teoten@gmail.com*
+* NOTES
+
+** Lack of constancy for official data from Spain
+Generally there is lack of constancy for the official data that we are craping from Spain. Among others:
+    - Sometimes they write the report with the current date for data from the day before, sometimes they write it with the date when the data was acquired. They specify it in the text but is hard to automatize.
+    - Changes in the format of the reports. The main problem is when the naming or sorting of the columns changes. This has to be evaluated manually only. we adapted the function =spain_update()= to print a message when this issue happens.
