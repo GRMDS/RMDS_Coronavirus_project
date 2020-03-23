@@ -102,19 +102,18 @@ the official website:
 
 https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm
     """
-    global updated_data
-    try:
-        updated_data
-    except NameError:
-        print("Problem in table format.\n Run sp_get_new() and check the data from there, or check the source directly")
-        sys.exit(1)
-    if sp_compare_update() == False:
-        global data_sp
-        data_sp = data_sp.append(updated_data, ignore_index = True)
-        data_sp.to_csv("./granular_cases_europe/Spain.csv", index = False)
-        return(data_sp)
-    else:
+    if sp_compare_update():
         print("No updates found")
+    else:
+        global updated_data
+        try:
+            updated_data
+        except NameError:
+            print("Problem in table format.\n Run sp_get_new() and check the data from there, or check the source directly")
+            sys.exit(1)
+        updated_data.to_csv("./granular_cases_europe/Spain.csv", mode = 'a', index = False, header=False)
+        print("Following updates added:\n")
+        return(data_sp)
 
 ## Bug on 22.03.2020
 ## <sp_get_new()> got headers as first row

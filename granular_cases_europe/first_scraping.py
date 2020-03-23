@@ -205,3 +205,30 @@ for col in italy_all:
 
 italy = pd.DataFrame({"country":"Italy", "region":italy_all["Region"], "confirmed_infected": italy_all["Contagi"], "dead": italy_all["Morti"], "recovered": italy_all["Guariti"], "timestamp": day})
 #italy.to_csv('./granular_cases_europe/Italy_first.csv', index = False)
+
+
+###   GERMANY   #############################################
+############################################################
+import urllib.request
+from bs4 import BeautifulSoup
+from selenium import webdriver
+import time
+import pandas as pd
+from selenium.webdriver.common.keys import Keys
+
+urlpage = 'https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/'
+driver = webdriver.Firefox(executable_path="./granular_cases_europe/geckodriver")
+driver.get(urlpage)
+
+# execute script to scroll down the page
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
+# sleep for 30s
+time.sleep(30)
+# driver.quit()
+
+results = driver.page_source 
+
+slider = results.find_element_by_id("sliderWidget")
+for i in range(10):
+  slider.send_keys(Keys.RIGHT)
+
