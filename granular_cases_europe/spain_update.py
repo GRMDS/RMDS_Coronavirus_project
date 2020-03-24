@@ -19,10 +19,12 @@ so we decided to use the report number (Actualizacion no#)
     sleep(20)
     content = driver.page_source 
     soup = BeautifulSoup(content, "lxml")
+    text_update = []
     for a in soup.find_all("a", href = True):
         if 'Actualización' in a.text:
-            text_update = a.text
-            print("Found: " + text_update)
+            text_update.append(a.text)
+            text_update.append(a['href'])
+            print("Found: " + text_update[0])
             driver.quit()
     return(text_update)
 ## Create a global variables with the text 
@@ -34,9 +36,9 @@ def sp_last_update():
     from datetime import datetime
     "Obtains the date of the last update"
     global text_update
-    match = re.search(r'\d{2}.\d{2}.\d{4}', text_update)
+    match = re.search(r'\d{2}.\d{2}.\d{4}', text_update[0])
     if match is None:
-        match = re.search(r'\d{1}.\d{2}.\d{4}', text_update)
+        match = re.search(r'\d{1}.\d{2}.\d{4}', text_update[0])
     if match is None:
         print("Date not found")
         date = 'NaN'
@@ -68,9 +70,10 @@ the previous one, leaving it ready to append
     import ssl
     ssl._create_default_https_context = ssl._create_unverified_context
     global text_update
-    text_pre = re.sub(":.*", "", text_update)
-    update_no = re.findall(r'\d+', text_pre)[0]
-    URL = f"https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_{update_no}_COVID-19.pdf"
+    #text_pre = re.sub(":.*", "", text_update)
+    #update_no = re.findall(r'\d+', text_pre)[0]
+    URL = re.sub(".*profesionales", "https://www.mscbs.gob.es/profesionales", text_update[1])
+    print("Getting data from "+URL)
     ## Extract all tables 
     tables = tabula.read_pdf(URL, pages = "all", multiple_tables = True)
     ## Iterate over all tables and find our target table
@@ -83,6 +86,8 @@ the previous one, leaving it ready to append
                         if "Asturias" in element:
                             target = df
                             break #<target> contains our raw data
+            break
+        break 
     try:
         target
     except NameError:
@@ -93,7 +98,7 @@ the previous one, leaving it ready to append
     return(target)
 
 target = sp_get_new()
-updated_data = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["Total casos"], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})
+updated_data = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["TOTAL conf."], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})
 
 def spain_update():
     """
@@ -129,3 +134,8 @@ https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-Ch
 #target = target.drop([0,1]).reset_index(drop = True) # remove row 1
 #
 #updated_data = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["TOTAL conf."], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})
+
+## Bug on 24.03.2020
+## BUG in for loop fixed (sp_get_new)
+## PLUS: Names of some headers changed
+## Idea: Only search for the word "Total" in headers name 

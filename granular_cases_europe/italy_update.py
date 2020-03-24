@@ -1,4 +1,3 @@
-
 def it_link_update():
     """
 Extracts the text with the link to the document from the main website.
@@ -35,8 +34,6 @@ def it_new_data():
     italy = pd.DataFrame({"country": "Italy", "region":italy_updated.iloc[:, 0], "confirmed_infected": italy_updated.iloc[:, 7], "dead": italy_updated.iloc[:, 6], "recovered": italy_updated.iloc[:, 5]})
     return(italy)
 
-italy = it_new_data()
-
 def it_date_update():
     import pandas as pd
     import re
@@ -53,10 +50,12 @@ def it_date_update():
         date = datetime.strptime(match.group(), '%d/%m/%Y').date()
     return(date)
 
+it_new = it_new_data()
+
 def italy_update():
     import pandas as pd
     data_it = pd.read_csv("./granular_cases_europe/Italy.csv")
-    it_new = it_new_data()
+    global it_new
     new_date = it_date_update()
     it_new['timestamp'] = new_date
     if data_it['timestamp'].isin([str(new_date)]).any():
@@ -66,3 +65,14 @@ def italy_update():
         print("Following updates added:\n")
         return(it_new)
 
+## BUG 24.03.2020
+## Rows were added at the begining as table headers
+## That makes the columns to be arranged differently
+## Manual fixing by spliting columns:
+#import pandas as pd
+#italy_updated = pd.read_csv('./granular_cases_europe/it_tmp.csv', skiprows = 7, thousands = '.')
+#df2 = italy_updated['positivi'].str.split(' ', 5, expand=True)
+#italy_updated = pd.concat([italy_updated, df2], axis = 1)
+#totals = [x for x in range(len(italy_updated.iloc[:, 0])) if italy_updated.iloc[:, 0][x] == "TOTALE"]
+#italy_updated = italy_updated.drop(range(totals[0], len(italy_updated.iloc[:, 0])))#.reset_index(drop = True)
+#it_new = pd.DataFrame({"country": "Italy", "region":italy_updated.iloc[:, 0], "confirmed_infected": italy_updated["Unnamed: 3"], "dead": italy_updated[4], "recovered": italy_updated[3]})
