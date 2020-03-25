@@ -80,7 +80,7 @@ the previous one, leaving it ready to append
     for dframe in tables:
         df = dframe.dropna(how = 'all')
         for col in df:
-            if type(df[col][0]) == str:
+            if type(df[col][10]) == str:
                 for element in df[col]:
                     if type(element) != float:
                         if "Asturias" in element:
@@ -98,7 +98,45 @@ the previous one, leaving it ready to append
     return(target)
 
 target = sp_get_new()
-updated_data = pd.DataFrame({"country":"Spain", "region":target["CCAA"], "confirmed_infected":target["TOTAL conf."], "dead":target["Fallecidos"], "timestamp": target["Timestamp"]})
+
+def sp_sort_data():
+    import pandas as pd
+    import re
+    "Getting the right column to the right position"
+    global target
+    region = []
+    confirmed = []
+    dead = []
+    recovered = []
+    for col in target:
+        for row in target[col]:
+            if re.search("CCAA", str(row), re.IGNORECASE):
+                region = target[col]
+                break
+            elif re.search("total", str(row), re.IGNORECASE):
+                confirmed = target[col]
+                break
+            elif re.search("fallecidos", str(row), re.IGNORECASE):
+                dead = target[col]
+                break
+            elif re.search("curados", str(row), re.IGNORECASE):
+                recovered = target[col]
+                break
+    if len(region) == 0:
+        print("ERROR: Region as CCAA not found. Check the data")
+        sys.exit(1)
+    if len(confirmed) == 0:
+        print("ERROR: Total not found. Check the data")
+        sys.exit(1)
+    if len(dead) == 0:
+        print("ERROR: Var <dead> not found as Fallecidos. Check the data")
+        sys.exit(1)
+    updated_data = pd.DataFrame({"country":"Spain", "region":region, "confirmed_infected":confirmed, "dead":dead, "timestamp": target["Timestamp"], "recovered":recovered})
+    start_data = [x for x in range(len(updated_data["region"])) if updated_data["region"][x] == "Andalucía"]
+    updated_data = updated_data.drop(range(0, start_data[0])).reset_index(drop = True)
+    return(updated_data)
+
+updated_data = sp_sort_data()
 
 def spain_update():
     """
@@ -118,9 +156,9 @@ https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-Ch
             sys.exit(1)
         updated_data.to_csv("./granular_cases_europe/Spain.csv", mode = 'a', index = False, header=False)
         print("Following updates added:\n")
-        return(data_sp)
+        return(updated_data)
 
-## Bug on 22.03.2020
+## Bug on 23.03.2020
 ## <sp_get_new()> got headers as first row
 ## PLUS: Names of some headers changed
 ## Issue was fixed manually. After few more cases we can asses it better
@@ -138,4 +176,12 @@ https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-Ch
 ## Bug on 24.03.2020
 ## BUG in for loop fixed (sp_get_new)
 ## PLUS: Names of some headers changed
-## Idea: Only search for the word "Total" in headers name 
+## Issue fixed manually
+## Bug solved by creating the funciton <sp_sort_data()>
+
+## Update on 25.03.2020: Data for recovered ("Curados") has been added
+## and so we added it to our data with previous entries as empty lines
+## Bug on 25.03.2020
+## Table not found, apparently the format changed
+## Fixed infunctions sp_get_new()
+## and sp_sort_data()
