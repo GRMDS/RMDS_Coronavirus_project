@@ -197,7 +197,7 @@ italy_all = pd.read_csv('./granular_cases_europe/Italy_first.csv')
 
 ## Format date 
 day = [re.sub('[^A-Za-z0-9]+', '-', x)+'2020' for x in italy_all.Data]
-[datetime.strptime(x, '%d-%m-%Y') for x in day] # Timestamp for df
+day = [datetime.strptime(x, '%d-%m-%Y').date() for x in day] # Timestamp for df
 
 for col in italy_all:
     if type(italy_all[col][0]) == str:
@@ -206,29 +206,63 @@ for col in italy_all:
 italy = pd.DataFrame({"country":"Italy", "region":italy_all["Region"], "confirmed_infected": italy_all["Contagi"], "dead": italy_all["Morti"], "recovered": italy_all["Guariti"], "timestamp": day})
 #italy.to_csv('./granular_cases_europe/Italy_first.csv', index = False)
 
+Italy = pd.read_csv('./granular_cases_europe/Italy_first.csv')
+tt = [dt.datetime.strptime(x, '%d-%m-%Y').date() for x in Italy.timestamp]
+Italy['tt'] = tt
 
 ###   GERMANY   #############################################
 ############################################################
-import urllib.request
+#import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 import pandas as pd
-from selenium.webdriver.common.keys import Keys
+import datetime as dt
+#from selenium.webdriver.common.keys import Keys
+
+region = []
+total = []
+recovered = []
+dead = []
+timestamp = []
+tody = dt.datetime.today().date()
+dia = tody
 
 urlpage = 'https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/'
 driver = webdriver.Firefox(executable_path="./granular_cases_europe/geckodriver")
 driver.get(urlpage)
-
-# execute script to scroll down the page
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
-# sleep for 30s
 time.sleep(30)
-# driver.quit()
+## clik button
+driver.find_element_by_class_name('fnktable__expand').click()
+time.sleep(5)
 
-results = driver.page_source 
+## For each click do:
+for i in range (1, 55, 1):
+    driver.find_element_by_class_name('slider-prev').click()
+    print('Loading data')
+    time.sleep(5)
+    content = driver.page_source 
+    soup = BeautifulSoup(content, "lxml")
+    table = soup.find_all("tbody")
+    dia = tody - dt.timedelta(i)
+    ## Withdraw data 
+    for t in table[0].find_all('tr'):
+        reg = t.find_all('td', {"class":"region"})
+        region.append(reg[0].text)
+        tot = t.find_all('td', {"class":"confirmed"})
+        total.append(tot[0].text)
+        rec = t.find_all('td', {"class":"recovered"})
+        recovered.append(rec[0].text)
+        de = t.find_all('td', {"class":"deaths"})
+        dead.append(de[0].text)
+        timestamp.append(dia)
 
-slider = results.find_element_by_id("sliderWidget")
-for i in range(10):
-  slider.send_keys(Keys.RIGHT)
+driver.quit()
+## Clean data 
+total = [re.sub('\.', '', x) for x in total]
+dead = [re.sub('\.', '', x) for x in dead]
+recovered = [re.sub('\.', '', x) for x in recovered]
 
+germany = pd.DataFrame({'country': 'Germany', 'region': region, 'confirmed_infected': total, 'dead':dead, 'recovered':recovered, 'timestamp':timestamp})
+
+#germany.to_csv('./granular_cases_europe/Germany_first.csv', index = False)
