@@ -1,27 +1,51 @@
-* Explanation
+* Development of COVID-19 in Europe at region level
+AUTHOR: Manuel T.
+CONTACT: teoten@gmail.com
 
+* Quick explanation of the code
 This folders contains csv files with different details (according to the
 sources) about cases of infection in different countries, to a geographical
 level more detailed than just country, as well as the code written in
 Python 3 to extract and update the data.
 
-* About the code
-
 ** =first_scraping.py=
 
-Code used for the creation of the first csv.
+Code used for the creation of the first csv file.
+
+Kept here for the record.
 
 ** Files per country
 
 Each country has its own =country_update.py= file which contains the code
 to update the =country.csv= file directly, via =country_update()= function.
 
-* CONTACT
+** Countries included
 
-For questions or details contact *teoten@gmail.com*
+*** France
+Source: [[https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv]]
+*** Spain
+Source: [[https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm]]
+*** Italy
+Source: [[https://statistichecoronavirus.it/regioni-coronavirus-italia/]]
+*** Germany
+Source: [[https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/]]
+
+* Workflow
+
+#+CAPTION: Workflow
+#+LABEL: fig:workflow
+[[file:covid-GranularData.png]]
+
+    1) *Web Research:* The first step is to find a good source. Although there are a lot of websites with information per country and in each country, the ones with the data per region are rare. Even more rare the ones that provide the development of of the spread in time and per region.
+    2) *Data scraping:* The next step is to do the data scraping. So far it all has been done using python 3.
+    3) *First extraction* code is stored in a common file called =first_scraping.py= and the outcome is =Country_first.csv=. These files (py and csv) are kept independently for reproducibility and as a backup.
+    4) *Automatising:* Once the first csv file is created, a python script is created for automation of the data scraping. The result is the code in =country_update.py= which updates the data stored in =Country.csv=.
+    5) *Daily update:* The script =country_update.py= is run daily. It contains all details to make the function =country_update()= run properly.
+    6) *Bugs:* If a bug is found, the best is to fix it immediately to keep the regularity of the updates. This means going back to steps *4* and *5* over again until the bug is fixed.
+    7) The final result is a file per country, =Country.csv= containing granular data of =confirmed_cases=, =dead=, =recovered=, together with =timestamp= and in some cases few more details, according to the availability. 
+
 * NOTES
 
 ** Lack of constancy for official data from Spain
-Generally there is lack of constancy for the official data that we are craping from Spain. Among others:
-    - Sometimes they write the report with the current date for data from the day before, sometimes they write it with the date when the data was acquired. They specify it in the text but is hard to automatize.
-    - Changes in the format of the reports. The main problem is when the naming or sorting of the columns changes. This has to be evaluated manually only. we adapted the function =spain_update()= to print a message when this issue happens.
+Generally there is lack of constancy for the official data that we are scraping from Spain. Among others:
+    - Sometimes they write the report with the current date for data from the day before, sometimes they write it with the date when the data was acquired. They specify it in the text but is hard to automatise.
