@@ -1,5 +1,6 @@
 * Development of COVID-19 in Europe at region level
 AUTHOR: Manuel T.
+
 CONTACT: teoten@gmail.com
 
 * Quick explanation of the code

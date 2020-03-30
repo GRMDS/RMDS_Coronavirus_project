@@ -1,6 +1,6 @@
 ## Global variables
-import pandas as pd
-data_sp = pd.read_csv("./granular_cases_europe/Spain.csv")
+#import pandas as pd
+#data_sp = pd.read_csv("./granular_cases_europe/Spain.csv")
 
 ## Functions
 def last_update_text():
@@ -54,8 +54,9 @@ Compares if the last update is already in our data base.
     False = We need to get the latest data 
     """
     import pandas as pd
+    print("Comparing updates")
     date = sp_last_update()
-    global data_sp
+    data_sp = pd.read_csv("./granular_cases_europe/Spain.csv")
     bol = data_sp['timestamp'].isin([str(date)]).any()
     return(bool(bol))
 
@@ -97,13 +98,13 @@ the previous one, leaving it ready to append
     #return(updated_df)
     return(target)
 
-target = sp_get_new()
+#target = sp_get_new()
 
 def sp_sort_data():
     import pandas as pd
     import re
     "Getting the right column to the right position"
-    global target
+    target = sp_get_new()
     region = []
     confirmed = []
     dead = []
@@ -131,12 +132,18 @@ def sp_sort_data():
     if len(dead) == 0:
         print("ERROR: Var <dead> not found as Fallecidos. Check the data")
         sys.exit(1)
+    if len(recovered) == 0:
+        print("ERROR: Var <recovered> not found as Curados. Check the data")
+        sys.exit(1)
     updated_data = pd.DataFrame({"country":"Spain", "region":region, "confirmed_infected":confirmed, "dead":dead, "timestamp": target["Timestamp"], "recovered":recovered})
     start_data = [x for x in range(len(updated_data["region"])) if updated_data["region"][x] == "Andalucía"]
     updated_data = updated_data.drop(range(0, start_data[0])).reset_index(drop = True)
+    updated_data['dead'] = [int(re.sub('[^0-9]','', str(x))) for x in updated_data['dead']]
+    updated_data['confirmed_infected'] = [int(re.sub('[^0-9]','', str(x))) for x in updated_data['confirmed_infected']]
+    updated_data['recovered'] = [int(re.sub('[^0-9]','', str(x))) for x in updated_data['recovered']]
     return(updated_data)
 
-updated_data = sp_sort_data()
+#updated_data = sp_sort_data()
 
 def spain_update():
     """
@@ -148,14 +155,15 @@ https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-Ch
     if sp_compare_update():
         print("No updates found")
     else:
-        global updated_data
+        print("Updates found")
+        updated_data = sp_sort_data()
         try:
             updated_data
         except NameError:
             print("Problem in table format.\n Run sp_get_new() and check the data from there, or check the source directly")
             sys.exit(1)
         updated_data.to_csv("./granular_cases_europe/Spain.csv", mode = 'a', index = False, header=False)
-        print("Following updates added:\n")
+        print("\n Following updates added:\n")
         return(updated_data)
 
 ## Bug on 23.03.2020
@@ -185,3 +193,9 @@ https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-Ch
 ## Table not found, apparently the format changed
 ## Fixed infunctions sp_get_new()
 ## and sp_sort_data()
+
+## Update on 28.03.2020: Data from Spain
+## One symbol was found to mark one value.
+## Detail corrected by removing all non numeric characters
+## in function <sp_sort_data()>
+## Used to also remove dots as thousand separator
