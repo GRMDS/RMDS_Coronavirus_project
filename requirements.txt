@@ -5,3 +5,6 @@ twython
 TwitterSearch
 lxml
 selenium
+ipdb==0.13.2
+pymongo==3.10.1
+us==1.0.0
