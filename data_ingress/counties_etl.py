@@ -57,6 +57,8 @@ def get_county_data(
     mongodb_port: int,
     mongodb_dest_database: str,
     mongodb_dest_collection: str,
+    mongodb_username: str,
+    mongodb_password: str,
 ):
     zipcode_data = get_county_zipcodes(zipcodes_csv, include_po_box_zips)
 
@@ -78,7 +80,15 @@ def get_county_data(
     counties = [County.from_census(zipcode_data, *county) for county in county_data]
 
     # Insert each county into the database
-    insert_counties_into_db(counties, mongodb_host, mongodb_port, mongodb_dest_database, mongodb_dest_collection)
+    insert_counties_into_db(
+        counties,
+        mongodb_host,
+        mongodb_port,
+        mongodb_dest_database,
+        mongodb_dest_collection,
+        mongodb_username,
+        mongodb_password,
+    )
 
 
 def get_county_zipcodes(zipcodes_csv: str, include_po_box_zips: bool):
@@ -102,8 +112,21 @@ def insert_counties_into_db(
     mongodb_port: int,
     mongodb_dest_database: str,
     mongodb_dest_collection: str,
+    mongodb_username: str,
+    mongodb_password: str,
 ):
-    mongo_client = MongoClient(mongodb_host, mongodb_port)
+    if mongodb_username and mongodb_password:
+        mongo_client = MongoClient(
+            mongodb_host,
+            mongodb_port,
+            username=mongodb_username,
+            password=mongodb_password,
+            authSource=mongodb_dest_database,
+            authMechanism='SCRAM-SHA-256',
+        )
+    else:
+        mongo_client = MongoClient(mongodb_host, mongodb_port)
+
     db = mongo_client[mongodb_dest_database]
     collection = db[mongodb_dest_collection]
 
@@ -120,7 +143,9 @@ if __name__ == '__main__':
     parser.add_argument('--include_po_box_zips', help='Whether to include PO BOX zipcodes', type=bool, default=True)
     parser.add_argument('--mongodb_host', help='The hostname of the mongodb server', default='localhost')
     parser.add_argument('--mongodb_port', help='The port to connect through for the mongodb server', type=int, default=27017)
-    parser.add_argument('--mongodb_dest_database', help='The database to store the county demographics data in', default='rmds')
-    parser.add_argument('--mongodb_dest_collection', help='The collection to store the county demographics data in', default='county_data')
+    parser.add_argument('--mongodb_dest_database', help='The database to store the county demographics data in', default='COVID19-DB')
+    parser.add_argument('--mongodb_dest_collection', help='The collection to store the county demographics data in', default='counties')
+    parser.add_argument('--mongodb_username', help='The username of the mongodb instance', default=None)
+    parser.add_argument('--mongodb_password', help='The password of the mongodb instance', default=None)
 
     get_county_data(**vars(parser.parse_args()))
