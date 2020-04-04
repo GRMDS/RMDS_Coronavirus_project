@@ -27,7 +27,7 @@ so we decided to use the report number (Actualizacion no#)
             print("Found: " + text_update[0])
             driver.quit()
     return(text_update)
-## Create a global variables with the text 
+## Create a global variable with the text 
 text_update = last_update_text()
 
 def sp_last_update():
