@@ -506,7 +506,7 @@ France,Corse,263.0,21.0,13.0,2020-03-27
 France,Grand Est,,657.0,699.0,2020-03-27
 France,Guadeloupe,,1.0,13.0,2020-03-27
 France,Guyane,34.0,0.0,0.0,2020-03-27
-France,Hauts-de-France,,169.0,302.0,2020-03-27
+France,Hauts-de-France,2300.0,169.0,302.0,2020-03-27
 France,La Réunion,,0.0,2.0,2020-03-27
 France,Martinique,93.0,1.0,15.0,2020-03-27
 France,Mayotte,50.0,0.0,2.0,2020-03-27
@@ -516,7 +516,7 @@ France,Occitanie,1553.0,61.0,187.0,2020-03-27
 France,Pays de la Loire,530.0,42.0,84.0,2020-03-27
 France,Provence-Alpes-Côte d'Azur,,48.0,186.0,2020-03-27
 France,Île-de-France,,578.0,1389.0,2020-03-27
-France,Auvergne-Rhône-Alpes,,195.0,432.0,2020-03-28
+France,Auvergne-Rhône-Alpes,,196.0,441.0,2020-03-28
 France,Bourgogne-Franche-Comté,,148.0,194.0,2020-03-28
 France,Bretagne,889.0,37.0,57.0,2020-03-28
 France,Centre-Val de Loire,1030.0,35.0,89.0,2020-03-28
@@ -536,7 +536,7 @@ France,Provence-Alpes-Côte d'Azur,,55.0,208.0,2020-03-28
 France,Île-de-France,,688.0,1570.0,2020-03-28
 France,Auvergne-Rhône-Alpes,,227.0,497.0,2020-03-29
 France,Bourgogne-Franche-Comté,,164.0,217.0,2020-03-29
-France,Bretagne,,41.0,57.0,2020-03-29
+France,Bretagne,962.0,41.0,57.0,2020-03-29
 France,Centre-Val de Loire,1157.0,39.0,103.0,2020-03-29
 France,Corse,,19.0,20.0,2020-03-29
 France,Grand Est,,815.0,792.0,2020-03-29
@@ -545,7 +545,7 @@ France,Guyane,43.0,0.0,0.0,2020-03-29
 France,Hauts-de-France,2653.0,211.0,348.0,2020-03-29
 France,La Réunion,,0.0,4.0,2020-03-29
 France,Martinique,111.0,3.0,15.0,2020-03-29
-France,Mayotte,,0.0,0.0,2020-03-29
+France,Mayotte,74.0,0.0,2.0,2020-03-29
 France,Normandie,,32.0,122.0,2020-03-29
 France,Nouvelle-Aquitaine,,58.0,160.0,2020-03-29
 France,Occitanie,2002.0,76.0,227.0,2020-03-29
@@ -563,7 +563,7 @@ France,Guyane,,0.0,0.0,2020-03-30
 France,Hauts-de-France,,242.0,400.0,2020-03-30
 France,La Réunion,,0.0,4.0,2020-03-30
 France,Martinique,,3.0,15.0,2020-03-30
-France,Mayotte,,0.0,0.0,2020-03-30
+France,Mayotte,82.0,0.0,3.0,2020-03-30
 France,Normandie,,42.0,137.0,2020-03-30
 France,Nouvelle-Aquitaine,,72.0,182.0,2020-03-30
 France,Occitanie,2126.0,82.0,267.0,2020-03-30
@@ -581,11 +581,11 @@ France,Guyane,,0.0,0.0,2020-03-31
 France,Hauts-de-France,,280.0,450.0,2020-03-31
 France,La Réunion,,0.0,6.0,2020-03-31
 France,Martinique,,3.0,18.0,2020-03-31
-France,Mayotte,,0.0,0.0,2020-03-31
+France,Mayotte,94.0,1.0,2.0,2020-03-31
 France,Normandie,,62.0,161.0,2020-03-31
 France,Nouvelle-Aquitaine,,78.0,202.0,2020-03-31
 France,Occitanie,2374.0,91.0,278.0,2020-03-31
-France,Pays de la Loire,,71.0,132.0,2020-03-31
+France,Pays de la Loire,916.0,82.0,132.0,2020-03-31
 France,Provence-Alpes-Côte d'Azur,,103.0,311.0,2020-03-31
 France,Île-de-France,,1176.0,1977.0,2020-03-31
 France,Auvergne-Rhône-Alpes,,349.0,672.0,2020-04-01
@@ -603,7 +603,7 @@ France,Mayotte,,0.0,0.0,2020-04-01
 France,Normandie,,69.0,164.0,2020-04-01
 France,Nouvelle-Aquitaine,,82.0,215.0,2020-04-01
 France,Occitanie,,108.0,304.0,2020-04-01
-France,Pays de la Loire,,82.0,133.0,2020-04-01
+France,Pays de la Loire,1021.0,100.0,133.0,2020-04-01
 France,Provence-Alpes-Côte d'Azur,,124.0,332.0,2020-04-01
 France,Île-de-France,,1369.0,2204.0,2020-04-01
 France,Auvergne-Rhône-Alpes,,404.0,700.0,2020-04-02
@@ -617,7 +617,7 @@ France,Guyane,,0.0,0.0,2020-04-02
 France,Hauts-de-France,,370.0,518.0,2020-04-02
 France,La Réunion,,0.0,2.0,2020-04-02
 France,Martinique,,3.0,20.0,2020-04-02
-France,Mayotte,,2.0,3.0,2020-04-02
+France,Mayotte,116.0,2.0,3.0,2020-04-02
 France,Normandie,,81.0,185.0,2020-04-02
 France,Nouvelle-Aquitaine,,94.0,221.0,2020-04-02
 France,Occitanie,,119.0,321.0,2020-04-02
@@ -635,10 +635,46 @@ France,Guyane,,0.0,1.0,2020-04-03
 France,Hauts-de-France,,438.0,547.0,2020-04-03
 France,La Réunion,,0.0,2.0,2020-04-03
 France,Martinique,,3.0,19.0,2020-04-03
-France,Mayotte,,2.0,3.0,2020-04-03
+France,Mayotte,128.0,2.0,3.0,2020-04-03
 France,Normandie,,93.0,197.0,2020-04-03
 France,Nouvelle-Aquitaine,,100.0,225.0,2020-04-03
 France,Occitanie,,131.0,322.0,2020-04-03
 France,Pays de la Loire,,109.0,169.0,2020-04-03
 France,Provence-Alpes-Côte d'Azur,,161.0,397.0,2020-04-03
 France,Île-de-France,,1791.0,2375.0,2020-04-03
+France,Auvergne-Rhône-Alpes,,478.0,749.0,2020-04-04
+France,Bourgogne-Franche-Comté,,323.0,274.0,2020-04-04
+France,Bretagne,,75.0,112.0,2020-04-04
+France,Centre-Val de Loire,,106.0,194.0,2020-04-04
+France,Corse,,26.0,26.0,2020-04-04
+France,Grand Est,,1402.0,960.0,2020-04-04
+France,Guadeloupe,,8.0,17.0,2020-04-04
+France,Guyane,,0.0,1.0,2020-04-04
+France,Hauts-de-France,,488.0,561.0,2020-04-04
+France,La Réunion,,0.0,4.0,2020-04-04
+France,Martinique,,3.0,18.0,2020-04-04
+France,Mayotte,,2.0,3.0,2020-04-04
+France,Normandie,,99.0,209.0,2020-04-04
+France,Nouvelle-Aquitaine,,111.0,239.0,2020-04-04
+France,Occitanie,,148.0,328.0,2020-04-04
+France,Pays de la Loire,,118.0,175.0,2020-04-04
+France,Provence-Alpes-Côte d'Azur,,178.0,417.0,2020-04-04
+France,Île-de-France,,1967.0,2436.0,2020-04-04
+France,Auvergne-Rhône-Alpes,,508.0,779.0,2020-04-05
+France,Bourgogne-Franche-Comté,,341.0,275.0,2020-04-05
+France,Bretagne,,81.0,112.0,2020-04-05
+France,Centre-Val de Loire,,115.0,194.0,2020-04-05
+France,Corse,,26.0,26.0,2020-04-05
+France,Grand Est,,1471.0,950.0,2020-04-05
+France,Guadeloupe,,8.0,18.0,2020-04-05
+France,Guyane,,0.0,1.0,2020-04-05
+France,Hauts-de-France,,520.0,573.0,2020-04-05
+France,La Réunion,,0.0,4.0,2020-04-05
+France,Martinique,,3.0,21.0,2020-04-05
+France,Mayotte,,2.0,3.0,2020-04-05
+France,Normandie,,111.0,217.0,2020-04-05
+France,Nouvelle-Aquitaine,,120.0,243.0,2020-04-05
+France,Occitanie,,158.0,321.0,2020-04-05
+France,Pays de la Loire,,123.0,181.0,2020-04-05
+France,Provence-Alpes-Côte d'Azur,,195.0,435.0,2020-04-05
+France,Île-de-France,,2107.0,2506.0,2020-04-05
