@@ -9,9 +9,7 @@
 # 2. Create a function that takes in the dataset CDC-TimeSeries from MongoDB and spits out country, date, total_num_infections, total_num_deaths. 
 # 
 # 3. Create a function that takes in CDC-TimeSeries from MongoDB and spits out country, days_since_first_infection, total_num_infections, total_num_deaths.
-
-# In[5]:
-
+import argparse
 
 def mongodb_import(collection_name):
     """
@@ -249,8 +247,7 @@ def date_diff_infection(country_name, big_num, small_num):
     
     diff = (df1-df2).values.astype(int)+1
     
-    return (f'It took {diff} days in {country_name} to reach from {small_num} cases to {big_num} cases.') 
-
+    return ('It took ',diff,' days in ', country_name ,' to reach from ', small_num, ' cases to ',big_num,' cases.')
 
 
 def date_diff_death(country_name, big_num, small_num):
@@ -262,5 +259,32 @@ def date_diff_death(country_name, big_num, small_num):
     
     diff = (df1-df2).values.astype(int)+1
     
-    return (f'It took {diff} days in {country_name} to reach from {small_num} deaths to {big_num} deaths.') 
+    return ('It took ',diff,' days in ', country_name ,' to reach from ', small_num, ' deaths to ',big_num,' deaths.')
 
+
+if __name__ == '__main__':
+    parser1 = argparse.ArgumentParser()
+    parser1.add_argument('--collection_name', help='Name of the collection in MongoDB to be imported', default=None)
+    mongodb_import(**vars(parser1.parse_args()))
+
+    tracker_update()
+    cml_tracker_update()
+
+    parser2 = argparse.ArgumentParser()
+    parser2.add_argument('--country_list', help='List of countries to be plotted', default=None)
+    infection_plot(**vars(parser2.parse_args()))
+    death_plot(**vars(parser2.parse_args()))
+    cml_infection_plot(**vars(parser2.parse_args()))
+    cml_death_plot(**vars(parser2.parse_args()))
+
+    parser3 = argparse.ArgumentParser()
+    parser3.add_argument('--infection',help='Number of infections or deaths based on the function',default=None)
+    days_taken_infection(**vars(parser3.parse_args()))
+    days_taken_death(**vars(parser3.parse_args()))
+
+    parser4 = argparse.ArgumentParser()
+    parser4.add_argument('--country_name', help='Country to be calculated',default=None)
+    parser4.add_argument('--big_num', help='Ending number of cases or deaths', default=None)
+    parser4.add_argument('--small_num', help='Beginning number of cases or deaths', default=None)
+    date_diff_infection(**vars(parser4.parse_args()))
+    date_diff_death(**vars(parser4.parse_args()))
