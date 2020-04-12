@@ -249,7 +249,6 @@ def date_diff_infection(country_name, big_num, small_num):
     
     return ('It took ',diff,' days in ', country_name ,' to reach from ', small_num, ' cases to ',big_num,' cases.')
 
-
 def date_diff_death(country_name, big_num, small_num):
     df1 = days_taken_death(big_num)
     df1 = df1.loc[df1.country == country_name,'days_since_first_infection']
