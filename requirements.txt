@@ -8,3 +8,5 @@ selenium
 ipdb==0.13.2
 pymongo==3.10.1
 us==1.0.0
+xlrd==1.2.0
+newsapi-python==0.2.6
