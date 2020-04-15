@@ -15,7 +15,7 @@ BASE_URL = 'https://api.census.gov'
 PATH = 'data/2018/acs/acsse'
 PATH2 = 'data/2019/pep/population'
 ATTRIBUTES = ['name', 'K200201_001E', 'K200201_002E', 'K200201_003E', 'K200201_004E', 'K200201_005E', 
-              'K200201_006E', 'K200201_007E','K200103_001E','K201703_001E','K201703_002E','K201703_007E']
+              'K200201_006E', 'K200201_007E','K200103_001E','K201703_001E','K201703_002E','K201703_007E', 'K200301_003E', 'K200301_001E']
 ATTRIBUTES2 = ['name', 'density']
 ATTRIBUTES_LABEL = ['name','race_total','White', 'Black or African American', 'American Indian and Alaska Native',
                     'Asian', 'Native Hawaiian and Other Pacific Islander', 'Some other race', 'Median age',
@@ -54,10 +54,10 @@ def insert_data(data, mongodb_host: str,
                       {"$set": {"white_rate": None, "black_rate": None, 
                                 "AIAN": None, "asian_rate": None, "NHPI": None, 
                                 "other_race": None, "median_age": None, "below_poverty": None,
-                                "above_poverty": None}},
+                                "above_poverty": None, "Hispanic_Latino": None}},
                       upsert=False, array_filters=None)
-    '''
     
+    '''
     for elem in data:
         countyname = elem[0].split(', ')[0]
         statename = elem[0].split(', ')[1]
@@ -78,11 +78,16 @@ def insert_data(data, mongodb_host: str,
         else:
             below_poverty, above_poverty = None, None
         
+        if elem[13]!=None:
+            Hispanic_Latino = float(elem[12])/float(elem[13])
+        else:
+            Hispanic_Latino = None
+            
         collection.update_one({"$and": [{"state_name": {"$eq": statename}},{"county_name": {"$eq": countyname}}]},
                               {"$set": {"white_rate": white_rate, "black_rate": black_rate, 
                                "AIAN": AIAN, "asian_rate": asian_rate, "NHPI": NHPI, 
                                "other_race": other, "median_age": median_age, "below_poverty": below_poverty,
-                               "above_poverty": above_poverty}},
+                               "above_poverty": above_poverty, "Hispanic_Latino": Hispanic_Latino}},
                               upsert=False)
         
 
@@ -134,4 +139,4 @@ def insert_landarea(mongodb_host: str,
 if __name__ == '__main__':
     #x = get_json_from_api()
     #y = insert_data(x[1:], '3.101.18.8', 27017, 'COVID19-DB', 'counties', 'Your Username', 'Your Password')
-    z = insert_landarea('3.101.18.8', 27017, 'COVID19-DB', 'counties', 'Your Username', 'Your Password')
+    #z = insert_landarea('3.101.18.8', 27017, 'COVID19-DB', 'counties', 'Your Username', 'Your Password')
