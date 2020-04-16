@@ -1,0 +1,42 @@
+Collections	Features	Label	Reference
+CDC-TimeSeries	Province/State	"State name, ""None"" for country level record"	
+CDC-TimeSeries	Country/Region	Country name	
+CDC-TimeSeries	County/City	"US county name, ""None"" for data outside US"	
+CDC-TimeSeries	Latitude	Geo Latitude	
+CDC-TimeSeries	Longitude	Geo Longitude	
+CDC-TimeSeries	Confirmed	Accumulated Confirmed infection number	
+CDC-TimeSeries	Date	Timestamp	
+CDC-TimeSeries	Death	Accumulated Death number	
+CDC-TimeSeries	Recovery	"Accumulated Recovery number (Unreliable data source, JHU stops updating this number for US county)"	
+Country_stringency	date_value	Timestamp	
+Country_stringency	country_code	Alpha-3 country code (I already convert it into country name)	
+Country_stringency	confirmed	Accumulated Confirmed infection number from Oxford	
+Country_stringency	deaths	Accumulated Death number from Oxford	
+Country_stringency	stringency_actual	Actual stringency index value (None if not enough data to calculate at that day)	https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker
+Country_stringency	stringency	Displayed stringency index value (Will equal to the previous day if actual value is None)	https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker
+Country_stringency	country	coverted country name	
+World_population	country	country name	
+World_population	Region	continent name	
+World_population	Population	country total population	
+counties	date_collected	Timestamp to collect the County population data	
+counties	population	US county population	
+counties	county_name	county name	
+counties	state_name	state name	
+counties	zipcodes	Array of all zipcodes belong to this county	
+counties	AIAN	American Indian and Alaska Native proportion	
+counties	NHPI	Native Hawaiian and Pacific Islander proportion	
+counties	above_proverty	Proportion of people above the proverty level	
+counties	asian_rate	Asian proportion	
+counties	black_rate	African American rate	
+counties	median_age	median age	
+counties	other_race	other race proportion	
+counties	white_race	white people proportion	
+counties	population_density_people/mi^2	"population density, number of people per square mile"	
+counties	Hispanic_Latino	Hispanic and Latino proportion	
+county_mobility	date	Timestamp	
+county_mobility	country_name	country name	
+county_mobility	state_name	state name	
+county_mobility	county_name	county name	
+county_mobility	sample_size	Number of people observed as sample to estimate mobility in this county	
+county_mobility	distance_median	median of the max m_50 distance for all samples	https://arxiv.org/pdf/2004.04544.pdf
+county_mobility	percent_of_normal	percent of that day's distance in normal distance (before coronvirus) 	
