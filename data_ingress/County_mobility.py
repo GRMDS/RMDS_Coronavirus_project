@@ -35,9 +35,18 @@ def insert_mobility_to_mongo(data, mongodb_host: str,
         )
     db = mongo_client[mongodb_dest_database]
     collection = db[mongodb_dest_collection]
-    
-    collection.drop()
-    collection.insert_many(data)
+    count = 0
+    for elem in data:
+        count +=1
+        if count%5000==0:
+            print (count)
+        elem['county_name'] = elem['county_name'].replace(" County", "")
+        collection.update_one({"$and": [{"Date": {'$eq': elem['date']}}, 
+                                                 {"Province/State": {'$eq': elem['state_name']}}, 
+                                                 {"County/City": {'$eq': elem['county_name']}}]},
+                                       {"$set": {"Mobility_sample_size": elem['sample_size'],
+                                                 "m50_distance_median_miles": elem['distance_median'],
+                                                 "m50_percent_of_normal": elem['percent_of_normal']}})
     
     return
 
@@ -45,4 +54,4 @@ def insert_mobility_to_mongo(data, mongodb_host: str,
 
 if __name__ == '__main__':
     x = get_data_from_url('https://raw.githubusercontent.com/descarteslabs/DL-COVID-19/master/DL-us-mobility-daterow.csv')
-    insert_mobility_to_mongo(x, '3.101.18.8', 27017, 'COVID19-DB', 'county_mobility', 'Your Username', 'Your Password')
+    insert_mobility_to_mongo(x, '3.101.18.8', 27017, 'COVID19-DB', 'CDC-TimeSeries', 'ruser', 'flzx3qc')
