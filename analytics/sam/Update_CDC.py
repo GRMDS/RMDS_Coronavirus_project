@@ -9,7 +9,28 @@
 # 2. Create a function that takes in the dataset CDC-TimeSeries from MongoDB and spits out country, date, total_num_infections, total_num_deaths. 
 # 
 # 3. Create a function that takes in CDC-TimeSeries from MongoDB and spits out country, days_since_first_infection, total_num_infections, total_num_deaths.
+
 import argparse
+import pandas as pd
+import numpy as np
+import pymongo
+from pymongo import MongoClient
+import matplotlib.pyplot as plt
+from datetime import datetime
+import warnings
+warnings.filterwarnings("ignore")
+
+
+
+# # Update CDC Functions
+
+# The purpose of this notebook is as follows:<br>
+# 1. Create a function that grabs data from MongoDB (COVID19-DB/CDC-TimeSeries table)
+# 
+# 2. Create a function that takes in the dataset CDC-TimeSeries from MongoDB and spits out country, date, total_num_infections, total_num_deaths. 
+# 
+# 3. Create a function that takes in CDC-TimeSeries from MongoDB and spits out country, days_since_first_infection, total_num_infections, total_num_deaths.
+
 
 def mongodb_import(collection_name:str):
     """
@@ -18,11 +39,9 @@ def mongodb_import(collection_name:str):
     Currently, the collections in the MongoDB are as follows: 'CDC-TimeSeries', 'DXY-TimeSeries', 'World_population', 'counties'
     
     """
-    import pandas as pd
     import pymongo
     from pymongo import MongoClient
-    import warnings
-    warnings.filterwarnings("ignore")
+    import pandas as pd
     
     auth = "mongodb://analyst:grmds@3.101.18.8/COVID19-DB"
     db_name = 'COVID19-DB'
@@ -41,10 +60,10 @@ def tracker_update():
     
     """ 
     import pandas as pd
+    import numpy as np
     import pymongo
     from pymongo import MongoClient
-    import warnings
-    warnings.filterwarnings("ignore")
+    import matplotlib.pyplot as plt
     
     df = mongodb_import('CDC-TimeSeries')
     df = df.loc[:,['Country/Region','Date','Confirmed','Death']].fillna(0)
@@ -76,7 +95,13 @@ def cml_tracker_update():
     
     Note that this function may not be efficient as it can be. If anyone else on the team has a better idea, please feel free to update it!
     """
+    import pandas as pd
+    import numpy as np
+    import pymongo
+    from pymongo import MongoClient
+    import matplotlib.pyplot as plt
     
+
     tracker = tracker_update()
     from datetime import datetime, timedelta
     tracker['days_since_first_infection'] = ""
@@ -114,9 +139,10 @@ def infection_plot(country_list):
     User can put any country that he/she wants to compare in the list as shown below.
     The function will plot based on this selectionof countries.
     """
-    
-    
+    import pandas as pd
     import matplotlib.pyplot as plt
+    
+    
     tracker = tracker_update()
     
     plt.figure(figsize = (16,8))
@@ -137,7 +163,9 @@ def death_plot(country_list):
     User can put any country that he/she wants to compare in the list as shown below.
     The function will plot based on this selectionof countries.
     """
+    import pandas as pd
     import matplotlib.pyplot as plt
+    
     tracker = tracker_update()
     
     plt.figure(figsize = (16,8))
@@ -159,8 +187,9 @@ def cml_infection_plot(country_list):
     The function will plot based on this selectionof countries.
     Note that the function calls another function defined above, which may take some time. 
     """
-    
+    import pandas as pd
     import matplotlib.pyplot as plt
+    
     cml_tracker = cml_tracker_update()
     plt.figure(figsize = (16,8))
     for x in country_list:
@@ -181,7 +210,9 @@ def cml_death_plot(country_list):
     The function will plot based on this selectionof countries.
     Note that the function calls another function defined above, which may take some time. 
     """
+    import pandas as pd
     import matplotlib.pyplot as plt
+
     cml_tracker = cml_tracker_update()
     plt.figure(figsize = (16,8))
     for x in country_list:
@@ -202,8 +233,8 @@ def days_taken_infection(infection):
     The output dataframe only shows the countries with infection # more than the number provided in ascending order.
     
     """
-    
     import pandas as pd
+    
     output = pd.DataFrame()
     cml_tracker = cml_tracker_update()
     for name, group in cml_tracker.groupby('country'):
@@ -238,53 +269,115 @@ def days_taken_death(death):
 
 
 
-def date_diff_infection(country_name, big_num, small_num):
-    df1 = days_taken_infection(big_num)
-    df1 = df1.loc[df1.country == country_name,'days_since_first_infection']
-    
-    df2 = days_taken_infection(small_num)
-    df2 = df2.loc[df2.country == country_name,'days_since_first_infection']
-    
-    diff = (df1-df2).values.astype(int)+1
-    
-    return ('It took ',diff,' days in ', country_name ,' to reach from ', small_num, ' cases to ',big_num,' cases.')
 
-def date_diff_death(country_name, big_num, small_num):
-    df1 = days_taken_death(big_num)
-    df1 = df1.loc[df1.country == country_name,'days_since_first_infection']
+
+def US_tracker_update():
+    """
+    The purpose of this function is as follows:
+    1. Import data from the CDC-TimeSeries table using the function above
+    2. Presents the date, state, county, number of infections, and number of deaths
+   
+    """ 
+    import pandas as pd
     
-    df2 = days_taken_death(small_num)
-    df2 = df2.loc[df2.country == country_name,'days_since_first_infection']
+    df = mongodb_import('CDC-TimeSeries')
+
+    df = df.loc[:,['Date','Country/Region' ,'Province/State', 'County/City', 'Confirmed','Death']].fillna(0)
+    df['Confirmed'] = df['Confirmed'].astype(int)
+    df['Death'] = df['Death'].astype(int)
+
+    tracker = pd.DataFrame(columns=['num_infections', 'num_deaths'])
+
+    tracker['num_infections'] = df.groupby(['Country/Region','Date','Province/State', 'County/City'])['Confirmed'].sum()   
+    tracker['num_deaths'] = df.groupby(['Country/Region','Date','Province/State', 'County/City'])['Death'].sum()    
     
-    diff = (df1-df2).values.astype(int)+1
+    tracker.reset_index(inplace= True)
+    tracker.rename(columns={"Country/Region": "country",'Province/State': "state", 'County/City': "county", "Date": "date"}, inplace = True)
+    US = tracker.loc[tracker.country == 'US']
+    US = US.loc[US['county'] != ""]
+    US = US.sort_values(by=['state', 'county', 'date']).reset_index(drop = True)
+    US = US.drop(['country'], axis=1)
     
-    return ('It took ',diff,' days in ', country_name ,' to reach from ', small_num, ' deaths to ',big_num,' deaths.')
+    # I realized the original dataset was in cumulative terms already --> had to un-cumulate
+    US['num_infections'] = US.groupby(['state','county'])['num_infections'].diff().fillna(0)
+    US['num_deaths'] = US.groupby(['state','county'])['num_deaths'].diff().fillna(0)
+
+    return US
+
+
+
+def US_cml_top10_tracker_update():
+
+    """
+    Cumulative tracker for cases and death for TOP 10 counties with the most number of cases on the most recent date from the collection
+    The output also contains the column that tracks number of days since 150 cases were reached for that county
+    
+    """
+    
+    import pandas as pd
+    from datetime import datetime
+    US = US_tracker_update()
+
+    US['state_county'] = US['state'] + "_" + US['county']            
+    US['days_since_150_cases'] = ""         
+    date_list = np.unique(US["date"].dt.strftime('%Y-%m-%d')).tolist()
+
+    last_date = max(np.unique(US["date"].dt.strftime('%Y-%m-%d')).tolist())
+
+    US["total_num_infections"] = US.groupby('county')['num_infections'].cumsum()
+    US["total_num_deaths"] = US.groupby('county')['num_deaths'].cumsum()
+
+    US_today = US.loc[(US.date == last_date)]
+    US_today.sort_values(by = 'total_num_infections', ascending = False, inplace=True)
+    top10 = US_today.head(10)
+
+    county_list = top10.state_county.tolist()
+
+    county_name = []
+    over150 = []
+
+    for county in county_list:
+        for date in date_list:
+            if US.loc[(US.date == date) & (US.state_county == county)].total_num_infections.values[0] > 150:
+                over150.append(date)
+                county_name.append(county)
+                break
+
+    top10 = US.loc[(US.state_county == county_name[0])]
+    for county in county_name[1:]:
+        top10 = pd.concat([top10, US.loc[(US.state_county == county)]])
+
+
+    over150 = [datetime.strptime(x, '%Y-%m-%d') for x in over150]
+    for x in range(0,len(county_name)):
+        for i in range(0,len(top10)):
+            infection_date = over150[x]
+            if top10.iloc[i,5] == county_name[x] and top10.iloc[i,0] == infection_date:
+                top10.iloc[i,6] = 1
+            elif top10.iloc[i,5] == county_name[x] and top10.iloc[i,0] >= infection_date:
+                top10.iloc[i,6] = top10.iloc[i-1,6] + 1
+            elif top10.iloc[i,5] == county_name[x] and top10.iloc[i,0] < infection_date:
+                top10.iloc[i,6] = (top10.iloc[i,0] - over150[x]).days
+    
+    
+    top10 = top10.drop(['num_infections','num_deaths', 'state_county'], axis=1)
+    top10.reset_index(drop = True, inplace= True)
+    return top10
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
-    parser1 = argparse.ArgumentParser()
-    parser1.add_argument('--collection_name', help='Name of the collection in MongoDB to be imported', default=None, required=True)
-    mongodb_import(**vars(parser1.parse_args()))
 
+    mongodb_import('CDC-TimeSeries')
     tracker_update()
     cml_tracker_update()
-  
-    parser2 = argparse.ArgumentParser()
-    parser2.add_argument('--country_list', help='List of countries to be plotted', default=None)
-    infection_plot(**vars(parser2.parse_args()))
-    death_plot(**vars(parser2.parse_args()))
-    cml_infection_plot(**vars(parser2.parse_args()))
-    cml_death_plot(**vars(parser2.parse_args()))
-
-    parser3 = argparse.ArgumentParser()
-    parser3.add_argument('--infection',help='Number of infections or deaths based on the function',default=None)
-    days_taken_infection(**vars(parser3.parse_args()))
-    days_taken_death(**vars(parser3.parse_args()))
-
-    parser4 = argparse.ArgumentParser()
-    parser4.add_argument('--country_name', help='Country to be calculated',default=None)
-    parser4.add_argument('--big_num', help='Ending number of cases or deaths', default=None)
-    parser4.add_argument('--small_num', help='Beginning number of cases or deaths', default=None)
-    date_diff_infection(**vars(parser4.parse_args()))
-    date_diff_death(**vars(parser4.parse_args()))
-  
+    US_tracker_update()
+    US_cml_top10_tracker_update()
+    
