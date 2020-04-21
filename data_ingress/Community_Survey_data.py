@@ -10,6 +10,7 @@ import pymongo
 from pymongo import MongoClient
 import numpy as np
 import requests
+import pandas as pd
 
 BASE_URL = 'https://api.census.gov'
 PATH = 'data/2018/acs/acsse'
@@ -136,7 +137,54 @@ def insert_landarea(mongodb_host: str,
     return land_data
 
 
+def insert_beds_data(mongodb_host: str,
+    mongodb_port: int,
+    mongodb_dest_database: str,
+    mongodb_dest_collection: str,
+    mongodb_username: str,
+    mongodb_password: str,):
+    
+    bed_data = pd.read_csv('https://raw.githubusercontent.com/GRMDS/RMDS_Coronavirus_project/master/analytics/Shen/Hospital_beds.csv')
+    ICU_data = pd.read_csv('https://raw.githubusercontent.com/GRMDS/RMDS_Coronavirus_project/master/analytics/Shen/ICU_beds.csv')
+    bed_data.columns = ['statename','countyname','numbeds']
+    ICU_data.columns = ['statename','countyname','ICUbeds','population_larger_60']
+    bed_data['countyname'] = bed_data['countyname'].str.lower()
+    ICU_data['countyname'] = ICU_data['countyname'].str.lower()
+    data = ICU_data.merge(bed_data, how = 'left', on = ['statename','countyname'])
+    
+    mongo_client = MongoClient(
+            mongodb_host,
+            mongodb_port,
+            username=mongodb_username,
+            password=mongodb_password,
+            authSource=mongodb_dest_database,
+            authMechanism='SCRAM-SHA-256',
+        )
+    db = mongo_client[mongodb_dest_database]
+    collection = db[mongodb_dest_collection]
+    
+    collection.update_many({},
+                      {"$set": {"ICUbeds": None, "population_older_60": None, 
+                                "num_of_beds": None}},
+                      upsert=False, array_filters=None)
+    
+    for index,row in data.iterrows():
+        statename = row.statename
+        countyname = row.countyname
+        str_list = countyname.split(' ')
+        countyname = ''
+        for elem in str_list:
+            countyname += elem.capitalize()+' '
+        countyname = countyname[:-1]
+        collection.update_one({"$and": [{"state_name": {"$eq": statename}},{"county_name": {"$eq": countyname}}]},
+                              {"$set": {"ICUbeds": row.ICUbeds, "population_older_60": row.population_larger_60, 
+                                        "num_of_beds": row.numbeds}},
+                              upsert=False) 
+    return data
+
+
 if __name__ == '__main__':
     #x = get_json_from_api()
     #y = insert_data(x[1:], '3.101.18.8', 27017, 'COVID19-DB', 'counties', 'Your Username', 'Your Password')
     #z = insert_landarea('3.101.18.8', 27017, 'COVID19-DB', 'counties', 'Your Username', 'Your Password')
+    #t = insert_beds_data('3.101.18.8', 27017, 'COVID19-DB', 'counties', 'Your Username', 'Your Password')
