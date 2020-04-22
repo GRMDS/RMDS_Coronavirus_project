@@ -4,7 +4,8 @@ import pandas as pd
 import numpy as np
 import json
 from io import StringIO
-
+import pickle
+import sys
 
 def crawl_data(main_url):
 	"""
@@ -45,8 +46,11 @@ def split_string(x):
 	except:
 		return x
 
-
-if __name__ == '__main__':
+def unemployment_rate_tojson():
+	"""
+	scrape all enunemployment rate data from year 1990 to 2024, organize into a json object
+	Return: a json object
+	"""
 	# dictionary for mapping state names
 	us_state = {'AL': 'Alabama',
 		 'AK': 'Alaska',
@@ -120,7 +124,8 @@ if __name__ == '__main__':
 	for url in url_dict:
 		df = crawl_data(url_dict[url])
 		df_dict[url] = df
-	
+
+
 	# append employment data from 1990 to 2024 into one single big dataframe
 	all_data = pd.DataFrame()
 	for t in time:
@@ -167,6 +172,10 @@ if __name__ == '__main__':
 	county_level["StartDate"] = county_level["StartDate"].dt.strftime('%Y-%m-%d')
 	county_level["EndDate"] = county_level["EndDate"].dt.strftime('%Y-%m-%d')
 	s = StringIO(county_level.to_json(orient='records'))
-	print(json.load(s))
 
+	return json.load(s)
+
+if __name__ == '__main__':
+	json_ls = unemployment_rate_tojson()
+	#print(json_ls)
 
