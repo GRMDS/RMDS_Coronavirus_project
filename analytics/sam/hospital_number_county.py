@@ -2,6 +2,7 @@
 
 import pandas as pd
 from sodapy import Socrata
+import json
 
 BASE_URL = "data.medicare.gov"
 PATH = 'xubh-q36u'
@@ -78,9 +79,10 @@ def hospital_num_county():
     hospital_count['county_name'] = hospital_count['county_name'].astype(str) + ' County'
     hospital_count_json = hospital_count.to_json(orient='records')
 
-    print(hospital_count_json)
+    #print(hospital_count_json)
+    return json.loads(hospital_count_json)
 
 
 
 if __name__ == '__main__':
-    hospital_num_county()
+    x = hospital_num_county()
