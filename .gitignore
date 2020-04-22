@@ -123,3 +123,4 @@ dmypy.json
 
 # Ignore GCP Authentication Keys
 keys/.DS_Store
+.DS_Store
