@@ -122,4 +122,4 @@ dmypy.json
 #.vscode/
 
 # Ignore GCP Authentication Keys
-keys/
+keys/.DS_Store
