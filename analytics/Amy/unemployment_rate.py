@@ -131,37 +131,39 @@ def unemployment_rate_tojson():
 	for t in time:
 		all_data = all_data.append(df_dict[t], ignore_index=True)
 
+	# drop records with no information at all
+	all_data = all_data.dropna()
+
 	# extract area_code and measure_code from series_id
 	all_data["area_code"] = all_data["series_id"].apply(lambda x: x[3:-2])
 	all_data["measure_code"] = all_data["series_id"].apply(lambda x: x[-2:])
-	#print(all_data.isnull().sum())
-	all_data["period"] = all_data["period"].fillna("")
+	# extract the month numbers from "period" field
 	all_data["month"] = all_data["period"].apply(lambda x: x.strip("M"))
-	
 	# filter records that are unemployment rate measures (measure_code == "03")
 	all_data = all_data.loc[all_data["measure_code"] == "03", :]
 
 	# extract county level area_code from area_df ("area_type_code" == "F")
 	area_df = df_dict["area"]
 	county_df = area_df.loc[area_df["area_type_code"] == "F", :]
-	
 	# match county names to all_data using county_df
 	all_data = all_data.merge(county_df[["area_code", "area_text"]], on="area_code", how="left").fillna(0)
-	all_data = all_data.loc[(all_data["area_text"] != 0)&(all_data["month"] != "13")&(all_data["month"] != ""), ["year", "month", "value", "area_text"]]
-	# change the format to match data in MongoDB
+	all_data = all_data.loc[(all_data["area_text"] != 0)&(all_data["month"] != "13"), ["year", "month", "value", "area_text"]]
+	
+	# change the format to match the required format
 	all_data["date"] = pd.to_datetime(all_data["year"] + all_data["month"], format="%Y%m")
 	all_data = all_data[["area_text", "date", "value"]].sort_values(["area_text", "date"]).rename(columns={"value": "unemployment_rate"})
 	# create a dataframe "county_level" that represents one county as a row
 	county_level = all_data["area_text"].value_counts().reset_index().rename(columns={"index": "area_text", "area_text": "count"})
+	
+	# extract the FirstDate of each county
 	tmp = all_data.groupby("area_text")["date"].first().reset_index().rename(columns={"date": "StartDate"})
 	county_level = county_level.merge(tmp, on="area_text")
+	# extract the EndDate of each county
 	tmp = all_data.groupby("area_text")["date"].last().reset_index().rename(columns={"date": "EndDate"})
 	county_level = county_level.merge(tmp, on="area_text")
 	# put all unemployment rates of a county into a list
 	tmp = all_data.groupby("area_text")["unemployment_rate"].agg(lambda x: x.values.tolist()).reset_index()
 	county_level = county_level.merge(tmp, on="area_text")
-	#county_level["unemployment_rate"] = np.asarray(county_level["unemployment_rate"])
-	#county_level["check"] = ((county_level["EndDate"]-county_level["StartDate"]) / np.timedelta64(1, 'M')).astype(int)
 
 	# split area_text into state and county
 	county_level["state"] = county_level["area_text"].apply(lambda x: split_string(x)).map(us_state)
@@ -177,5 +179,5 @@ def unemployment_rate_tojson():
 
 if __name__ == '__main__':
 	json_ls = unemployment_rate_tojson()
-	#print(json_ls)
+	print(json_ls)
 
