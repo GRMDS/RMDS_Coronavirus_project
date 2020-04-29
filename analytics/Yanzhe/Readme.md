@@ -1,5 +1,7 @@
 # COVID-19_RMDS
 Analysis and modeling on COVID-19 related data.
+(Code still in progress, not ready to replicate my work; will convert to fit our MongoDB and git data)
+
 1) Data Source
     Disease data in MongoDB
     Mobility data in MongoDB & Git
