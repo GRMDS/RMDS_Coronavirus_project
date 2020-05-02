@@ -9,6 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pandas.plotting import register_matplotlib_converters
 from datetime import datetime
+import folium
+from folium.plugins import MarkerCluster
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -203,7 +205,121 @@ def top10_after100_cml_plot():
     plt.grid()
     plt.show()
 
+
+
     
+    
+def most_recent():
+    county = import_county()
+    county['state_county'] = county['County/City'] + ", " + county['Province/State'] 
+    last_date = max(np.unique(county["Date"].dt.strftime('%Y-%m-%d')).tolist())
+    today = county.loc[(county['Date'] == last_date)]
+    return today
+
+
+def hotspots():
+    """
+       Identifies 'hotspots', or top 20 counties with the most number of confirmed cases for the most recent date
+       """
+
+    category = 'Confirmed'
+    number = 20
+
+    county = import_county()
+    county['state_county'] = county['County/City'] + ", " + county['Province/State']
+
+    last_date = max(np.unique(county["Date"].dt.strftime('%Y-%m-%d')).tolist())
+    today = county.loc[(county['Date'] == last_date)]
+    today.sort_values(by=category, ascending=False, inplace=True)
+    top = today.head(number)
+    top_list = top.state_county.tolist()
+
+    top = county.loc[(county.state_county == top_list[0])]
+    for x in top_list[1:]:
+        top = pd.concat([top, county.loc[(county.state_county == x)]])
+
+    top.reset_index(drop=True, inplace=True)
+
+    threshold = 100
+
+    top_list = top.state_county.unique().tolist()
+    date_list = top["Date"].dt.strftime('%Y-%m-%d').unique().tolist()
+
+    county_name = []
+    over_threshold = []
+
+    for county in top_list:
+        for date in date_list:
+            if top.loc[(top['Date'] == date) & (top['state_county'] == county)].Confirmed.values[0] > threshold:
+                over_threshold.append(date)
+                county_name.append(county)
+                break
+
+    over_threshold = [datetime.strptime(x, '%Y-%m-%d') for x in over_threshold]
+
+    top['Days After 100th Infection'] = ''
+
+    for x in range(0, len(county_name)):
+        for i in range(0, len(top)):
+            infection_date = over_threshold[x]
+            if top.iloc[i, 14] == county_name[x] and top.iloc[i, 0] == infection_date:
+                top.iloc[i, 15] = 1
+            elif top.iloc[i, 14] == county_name[x] and top.iloc[i, 0] >= infection_date:
+                top.iloc[i, 15] = top.iloc[i - 1, 15] + 1
+            elif top.iloc[i, 14] == county_name[x] and top.iloc[i, 0] < infection_date:
+                top.iloc[i, 15] = (top.iloc[i, 0] - over_threshold[x]).days
+
+    top_today = top.loc[(top['Date'] == last_date)]
+
+    return top_today
+
+
+def hotspot_map():
+    hotspot = hotspots()
+    hotspot.reset_index(drop = True, inplace= True)
+    hotspot['Longitude'] = pd.to_numeric(hotspot['Longitude'],errors='coerce')
+    hotspot['Latitude'] = pd.to_numeric(hotspot['Latitude'],errors='coerce')
+    
+    locations = hotspot[['Latitude', 'Longitude']]
+    locationlist = locations.values.tolist()
+    
+
+    map2 = folium.Map(location=[39.8283, -98.5795], zoom_start=4)
+
+    marker_cluster = MarkerCluster().add_to(map2)
+
+    for point in range(0, len(locationlist)):
+        name = hotspot.loc[point,['state_county']].values[0]
+        rank = 'Rank: ' + str(point)
+        confirmed = 'Confirmed: ' + str(hotspot.loc[point,['Confirmed']].values[0])
+
+        folium.Marker(locationlist[point], 
+                      popup=(name, rank, confirmed), 
+                      icon = folium.Icon(color='red')).add_to(marker_cluster)
+
+    recent = most_recent()
+    recent['Longitude'] = pd.to_numeric(recent['Longitude'],errors='coerce')
+    recent['Latitude'] = pd.to_numeric(recent['Latitude'],errors='coerce')
+    recent = recent.dropna(subset=['Longitude']) 
+    recent = recent.dropna(subset=['Latitude'])
+    recent.reset_index(drop = True, inplace= True) 
+
+    locations = recent[['Latitude', 'Longitude']]
+    locationlist = locations.values.tolist()
+    
+    for point in range(0, len(locationlist)):
+        name = recent.loc[point,['state_county']].values[0]
+        confirmed = recent.loc[point,['Confirmed']].values[0]
+        size = (confirmed + 1000).astype(float)
+
+        folium.Circle(radius = size,
+                      location = locationlist[point],popup=(name, str(confirmed)),
+                      color = 'crimson',
+                      fill = True).add_to(map2)
+    
+    return map2
+
+
 
 if __name__ == '__main__':
 
@@ -213,4 +329,5 @@ if __name__ == '__main__':
     top10_cml_infection_plot()
     top10_after100_plot()
     top10_after100_cml_plot()
+    hotspot_map()
 
