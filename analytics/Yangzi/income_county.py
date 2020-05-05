@@ -29,26 +29,14 @@ page = urlopen(req)
 soup = BeautifulSoup(page)
 
 
-# In[3]:
-
-
+#to get the excel from the website 
 def get_excel (site, pattern):
     files = str(soup.find('a',attrs={'href':re.compile(pattern)}))
     path = re.findall(pattern,files)[0][9:]
     url=BASE_URL+path
     return url
 
-
-# In[4]:
-
-
-url = get_excel(site, pattern)
-
-
-
-# In[6]:
-
-
+#data cleaning 
 data = pd.read_excel('lapi1119.xlsx').iloc[4:-3,[0,3]]
 data.columns=['County','2018 Personal Income Per Capita']
 data = data.reset_index().iloc[:,1:]
@@ -68,4 +56,3 @@ income_dict=df_final.to_dict('record')
 
 if __name__ == '__main__':
     x = get_excel(site, pattern)
-
