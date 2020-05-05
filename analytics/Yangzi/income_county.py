@@ -63,11 +63,8 @@ for i in range(1,len(df_list)):
     df_list[i]=df_list[i][df_list[i].County!=state]
     df_final = pd.concat([df_final,df_list[i]],axis=0)
 
-
-# In[7]:
-
-
-df_final.to_csv('income_county.csv')
+#to be ready for mongoDB
+income_dict=df_final.to_dict('record')
 
 if __name__ == '__main__':
     x = get_excel(site, pattern)
