@@ -23,10 +23,13 @@ require([
         "content": popUpEvent
     };
 
-
+    // Response for 
     function popUpEvent(target) {
         
         let query = target.graphic.layer.createQuery();
+        if (query === null) {
+            return;
+        }
         query.where = "__OBJECTID = " + target.graphic.attributes["__OBJECTID"];
         query.outFields = ["*"];
 
@@ -39,7 +42,8 @@ require([
             }
             queryNewsCount++;
             
-            getProvince(info["Country/Region"], info["Province/State"], info["Latitude"], info["Longitude"]);
+            // Query Data from the remote Data Server
+            queryNode(info["Country/Region"], info["Province/State"]);
             return ("<b>Country: </b>" + info["Country/Region"] + "<br>"
                     + "<b>City / States: </b>" + info["Province/State"] + "<br>"
                     //+ "<b>Latitude: </b>" + info["Latitude"] + "<br>"
@@ -86,75 +90,21 @@ function isEmpty(obj) {
     return true;
 }
 
-function readCSVFile() {
-    Papa.parse("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", {
-        download: true,
-	    complete: function(results) {
-            cData = results;
-	    }
-    });
-
-    Papa.parse("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv", {
-        download: true,
-        complete: function(results) {
-            dData = results;
-        }
-    });
-
-    Papa.parse("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv", {
-        download: true,
-        complete: function(results) {
-            rData = results;
-        }
-    });
-}
-
 // 确保每次只查询一次新闻
 let queryNewsCount = 0;
 
-let cData = {};
-let rData = {};
-let dData = {};
-
-// init();
-readCSVFile();
-
-
-let getProvince = function(country, province) {
-    // console.log("Country = " + country + ", Province = " + province);
-    
-    let dataIndex = queryProvince(country, province);
-    
-    // console.log(cData.data[dataIndex]);
-    if (dataIndex == -1) {
-        return;
-    }
-
-    let data = cData.data[dataIndex];
-    let rdata = rData.data[dataIndex];
-    let ddata = dData.data[dataIndex];
-
-    let dateArray = [];
-    let dataArray = [];
-    let deathArray = [];
-    let recoveredArray = [];
-    for (let i = 4; i < cData.data[0].length; i++) {
-        dateArray.push(cData.data[0][i]);
-        dataArray.push(data[i]);
-        deathArray.push(ddata[i]);
-        recoveredArray.push(rdata[i]);
-    }
+function updateChart(data) {
     let chartDiv = document.getElementById("chart-2");
     if (chartDiv === null) {
         console.log("Can't find the chart div.");
         return;
     }
     let title = "";
-    if (data[0] === "") {
-        title = "Country: " + data[1];
+    if (data.province === "") {
+        title = "Country: " + data.country;
     }
     else {
-        title = "Province / State: " + data[0];
+        title = "Province: " + data.province;
     }
     // 基于已有的Div，初始化echarts实例
     echarts.dispose(chartDiv);
@@ -173,7 +123,7 @@ let getProvince = function(country, province) {
             data: ['Confirmed', 'Recovered', 'Deaths'],
         },
         xAxis: {
-            data: dateArray,
+            data: data.date,
         },
         yAxis: {
 
@@ -181,104 +131,25 @@ let getProvince = function(country, province) {
         series: [{
             name: 'Confirmed',
             type: 'line',
-            data: dataArray,
+            data: data.confirmed,
         },
         {
             name: 'Recovered',
             type: 'line',
-            data: recoveredArray,
+            data: data.recovered,
         },
         {
             name: 'Deaths',
             type: 'line',
-            data: deathArray,
+            data: data.deaths,
         }]
     }
 
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(options);
-
-
-
-};
-
-function compareCountry(target, source) {
-    if (target === null || target === "") {
-        return false;
-    }
-    if (source === null || source === "") {
-        return false;
-    }
-    const targetList = target.split(' ');
-    const sourceList = source.split(' ');
-    if (sourceList.length === 1 && targetList.length === 1) {
-        if (targetList[0].indexOf(sourceList[0]) !== -1) {
-            return true;
-        }
-    }
-    else {
-        if (target.indexOf(source) !== -1) {
-            return true;
-        }
-    }
-    
-    return false;
 }
 
-function compareProvince(target, source) {
-    if (target === null || target === "") {
-        return false;
-    }
-    if (source === null || source === "") {
-        return false;
-    }
-    const sourceList = source.split(' ');
-    for (let i = 0; i < sourceList.length; i++) {
-        let index = 0;
-        index = target.toLowerCase().indexOf(sourceList[i].toLowerCase());
-        if (index !== -1 && index === 0) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-
-function queryProvince(country, province) {
-    if (isEmpty(cData)) {
-        return -1;
-    }
-    
-    if (province === '') {
-        for (let i = 1; i < cData.data.length; i++) {
-            if (compareCountry(cData.data[i][1], country) == true) {
-                return i;
-            } 
-        }
-    }
-    else {
-        for (let i = 1; i < cData.data.length; i++) {
-            if (cData.data[i][0] !== "") {
-                if (compareProvince(cData.data[i][0], province) == true) {
-                    if (compareCountry(cData.data[i][1], country) == true) {
-                        return i;
-                    }
-                    // return i;
-                }
-            }
-            else {
-                if (compareCountry(cData.data[i][1], country) == true) {
-                    return i;
-                }
-            }
-        }
-    }
-    return 13;
-}
-
-
-
+// Google News RSS parser
 function parseXML(xmlNode) {
     if (xmlNode === null) {
         console.log("XML is empty");
@@ -292,7 +163,7 @@ function parseXML(xmlNode) {
     const MAX_NODES = 10;
 
     let arcDiv = document.getElementById("viewRightDiv");
-    if (arcDiv === null || arcDiv === 'undefined') {
+    if (arcDiv === null || typeof arcDiv === 'undefined') {
         console.log("Can't get the news bar");
         return;
     }
@@ -383,14 +254,40 @@ function queryNews(country, province) {
         .then(response => response.text())
         .then((contents) => {parseXML(contents)})
         .catch(() => console.log("Can’t access " + baseUrl + " response. Blocked by browser?"))
-    
+}
+
+function queryNode(country, province) {
+    if (typeof country === 'undefined' || typeof province === 'undefined') {
+        return;
+    }
+
+    let baseUrl = "https://36techfreedom.com:5000/data";
+    let data = {country: country, province: province};
+    postData(baseUrl, data)
+        .then((data) => {
+            console.log(data);
+            updateChart(data);
+        }) // JSON from `response.json()` call
+        .catch(error => console.error(error))
     
 }
 
-queryNews("Mainland China", "Wuhan");
-getProvince("Mainland China", "Hubei");
-
-
+function postData(url, data) {
+    // Default options are marked with *
+    return fetch(url, {
+        body: JSON.stringify(data), // must match 'Content-Type' header
+        //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        //credentials: 'include', // include, same-origin, *omit
+        headers: {
+            'content-type': 'application/json'
+        },
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, cors, *same-origin
+        //redirect: 'follow', // manual, *follow, error
+        //referrer: 'no-referrer', // *client, no-referrer
+    })
+    .then(response => response.json()) // parses response to JSON
+}
 
 (function($) { // Begin jQuery
     $(function() { // DOM ready
